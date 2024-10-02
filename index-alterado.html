@@ -1,0 +1,529 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="utf-8">
+    <link rel="icon" href="assets/img/img-favicon/favicon.svg" type="image/svg+xml">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="Start your development with Steller landing page.">
+    <meta name="author" content="Devcrud">
+    <title>Fellipe Melo</title>
+    <!-- font icons -->
+    <link rel="stylesheet" href="assets/vendors/themify-icons/css/themify-icons.css">
+
+    <link rel="stylesheet" type="text/css" href="slick/slick.css" />
+    <link rel="stylesheet" type="text/css" href="slick/slick-theme.css" />
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    <!-- Adicione o arquivo JS do Slick Carousel -->
+    <script type="text/javascript" src="slick/slick.min.js"></script>
+
+
+    <script src="https://kit.fontawesome.com/24defec40b.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="assets/js/curso-percentual.js"></script>
+    <!-- Bootstrap + Steller main styles -->
+    <link rel="stylesheet" href="assets/css/steller.css">
+</head>
+
+<body data-spy="scroll" data-target=".navbar" data-offset="40" id="home">
+
+    <!-- Page navigation -->
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top" data-spy="affix" data-offset-top="0">
+        <div class="container">
+            <img class="header-img" src="assets/img/img-icons/marca.svg" alt="">
+
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ml-auto align-items-center">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#home">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#about">Sobre</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#experiencia">Experiência</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#formacao">Formação</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contato">Contato</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- End of page navibation -->
+
+    <!-- Page Header -->
+    <header class="header" id="home">
+        <div class="container">
+            <div class="infos">
+                <h6 class="title">Fellipe Melo</h6>
+                <p>Data Analitycs e Business Intelligence</p>
+                <div class="buttons pt-3">
+                    <button class="btn btn-dark rounded"><a href="Fellipe Melo - Data Analytics.pdf"
+                            download="Fellipe_Melo.pdf">DOWNLOAD CV</a></button>
+                </div>
+
+                <div class="socials mt-4">
+                    <a href="https://api.whatsapp.com/send?phone=5561985612400" class="social-item"><i
+                            class="fa-brands fa-square-whatsapp"></i></a>
+                    <abbr title="e-mail: fellipe.scontato@gmail.com">
+                        <a class="social-item" href="#contato"><i class="fa-solid fa-envelope"></i></a>
+                    </abbr>
+                    <a class="social-item" href="https://github.com/Fellipe-dotmelo/Fellipe-dotmelo"><i
+                            class="fa-brands fa-github-alt"></i></i></a>
+                    <a class="social-item" href="https://www.linkedin.com/in/fellipesmelo"><i
+                            class="fa-brands fa-linkedin"></i></a>
+                </div>
+            </div>
+            <div class="img-holder">
+                <img src="assets/img/img-profile/profile-fellps.png" alt="foto de perfil">
+            </div>
+        </div>
+
+        <!-- About section -->
+        <section id="about" class="section mt-3">
+            <div class="container mt-5">
+                <div class="row text-center text-md-left">
+                    <div class="col-md-3">
+                        <img src="assets/img/img-profile/profile-focus.png" alt="foto de perfil"
+                            class="img-thumbnail mb-4">
+                    </div>
+                    <div class="pl-md-4 col-md-9">
+                        <h6 class="title">Fellipe Melo</h6>
+                        <p class="subtitle">Resumo</p>
+                        <p>Formação em Análise e Desenvolvimento de Sistemas pela UNESA (Universidade Estácio de Sá),
+                            atuei na área de Tecnologia, em específico com suporte técnico. Realizando Especialização em
+                            Big Data para Business Analytics e Intelligence na UCB (Universidade Católica de Brasília),
+                            visando me tornar um Analista de Dados. Nos últimos meses experiênciei no meu último
+                            emprego, tarefas na Área de Dados, atuando em processos de ETL, análise exploratória de
+                            dados, com ferramentas como: Excel, Power BI, SQL Server e Python. Experienciei também na
+                            faculdade projetos que envolviam a criação de Dashboards e exploração de Dados.</p>
+                        <div class="buttons">
+                            <button class="btn btn-dark rounded"><a href="#contato">CONTATE-ME</a></button>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="animacao">
+            <div class="container-bouncing-balls">
+                <div class="ball"></div>
+                <div class="ball"></div>
+                <div class="ball"></div>
+            </div>
+        </section>
+
+        <section class="empresas-container" id="experiencia">
+            <div class="experiencia-topicos">
+                <!-- XP1 -->
+                <div class="empresa">
+                    <div class="card-imagem">
+                        <div class="iframe-container">
+                            <iframe title="ProjetoCurso" 
+                                src="https://app.powerbi.com/view?r=eyJrIjoiYjFlMGUxYmUtODQ1ZS00MzkxLTk2NTAtYmM1MTZhMThiNjYzIiwidCI6IjQ3M2RhZThlLTg2M2MtNDE2NS1hMGE2LTk0MTA4YzhkM2UwZCJ9"
+                                frameborder="0" allowFullScreen="true"></iframe>
+                            </abbr>
+                        </div>
+                    </div>
+                    <div class="card-info">
+                        <h5 class="curso-tipo">Dashboard | Vendas de Eletrônicos</h3>
+                        <p class="empresa-descricao">Dashboard desenvolvido em Power BI, com uso de medidas, funções
+                            DAX, power query e tooltips.
+                            A intenção do projeto é acompanhar cada detalhe da locadora de veículos.
+                        </p>
+                        <ul class="empresa-habilidades">
+                            <li>EXCEL</li>
+                            <li>POWER BI</li>
+                            <li>FIGMA</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="empresa">
+                    <div class="card-imagem">
+                        <div class="iframe-container">
+                            <iframe title="locacao-veiculos" 
+                                src="https://app.powerbi.com/view?r=eyJrIjoiMjkwOWQwZTYtZDYyMi00Zjg0LWIwZjUtNzYyNGNkNjkyMzFhIiwidCI6IjQ3M2RhZThlLTg2M2MtNDE2NS1hMGE2LTk0MTA4YzhkM2UwZCJ9"
+                                frameborder="0" allowFullScreen="true"></iframe>
+                        </div>
+                        <div class="card-info">
+                            <h5 class="curso-tipo">Dashboard | Vendas de Veículos</h3>
+                            <p class="empresa-descricao">Dashboard desenvolvido em Power BI, com uso de medidas, funções
+                                DAX, power query.
+                                A intenção do projeto é acompanhar cada detalhe da locadora de veículos.
+                            </p>
+                            <ul class="empresa-habilidades">
+                                <li>EXCEL</li>
+                                <li>POWER BI</li>
+                                <li>SQL SERVER</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="empresa">
+                    <div class="card-imagem">
+                        <div class="iframe-container">
+                            <iframe title="dashboard-universidade" 
+                                src="https://app.powerbi.com/view?r=eyJrIjoiZTY1NGYwNGEtOTNmOS00MWExLWFiZmYtNzJiNjViNDlhOTEwIiwidCI6IjQ3M2RhZThlLTg2M2MtNDE2NS1hMGE2LTk0MTA4YzhkM2UwZCJ9"
+                                frameborder="0" allowFullScreen="true"></iframe>
+                        </div>
+                    </div>
+                    <div class="card-info">
+                        <h5 class="curso-tipo">Dashboard | Universidade</h3>
+                        <p class="empresa-descricao">Dashboard desenvolvido em Power BI, com uso de medidas, funções
+                            DAX, power query.
+                            A intenção do projeto é os alunos matriculados por campus, por sexo e o percentual de
+                            pessoas que buscaram ou não seus diplomas (dado este que reflete diretamente na
+                            inadimplência). Mostrando também a inadimplência num contexto geral.
+                        </p>
+                        <ul class="empresa-habilidades">
+                            <li>EXCEL</li>
+                            <li>POWER BI</li>
+                            <li>SQL SERVER</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="empresa">
+                    <div class="card-imagem">
+                        <div class="iframe-container">
+                            <iframe title="acompanhamento_RH" 
+                                src="https://app.powerbi.com/view?r=eyJrIjoiODI4YzcwM2EtNTk5ZC00NGE2LThjNzEtNmRhYzJiMzc0NTQ4IiwidCI6IjQ3M2RhZThlLTg2M2MtNDE2NS1hMGE2LTk0MTA4YzhkM2UwZCJ9"
+                                frameborder="0" allowFullScreen="true"></iframe>
+                        </div>
+                    </div>
+                    <div class="card-info">
+                        <h5 class="curso-tipo">Dashboard | Acompanhamento RH</h3>
+                        <p class="empresa-descricao">Dashboard desenvolvido em Power BI, com uso de medidas, funções
+                            DAX, power query.
+                        </p>
+                        <ul class="empresa-habilidades">
+                            <li>EXCEL</li>
+                            <li>POWER BI</li>
+                            <li>SQL SERVER</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- XP4 -->
+                <div class="empresa">
+                    <div class="card-imagem">
+                        <div class="iframe-container">
+                            <iframe title="dashboard_campeonato_brasileiro" 
+                                src="https://app.powerbi.com/view?r=eyJrIjoiNWY3NTE4ZWQtODVmMy00NWQzLWFkN2YtNTY3ZWE2YWJhODFmIiwidCI6IjQ3M2RhZThlLTg2M2MtNDE2NS1hMGE2LTk0MTA4YzhkM2UwZCJ9"
+                                frameborder="0" allowFullScreen="true"></iframe>
+                        </div>
+                    </div>
+                    <div class="card-info">
+                        <h5 class="curso-tipo">Dashboard | Brasileirão de 2021</h3>
+                        <p class="empresa-descricao">Dashboard desenvolvido em Power BI, com uso de medidas, funções
+                            DAX, power query.
+                        </p>
+                        <ul class="empresa-habilidades">
+                            <li>EXCEL</li>
+                            <li>POWER BI</li>
+                            <li>DAX</li>
+                            <li>M</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- XP5 -->
+                <div class="empresa">
+                    <div class="card-imagem">
+                        <div class="iframe-container">
+                            <iframe title="dashboard_vendas" 
+                                src="https://app.powerbi.com/view?r=eyJrIjoiNDNkYTUwYmMtY2U4Ny00YTdkLThmZGQtOGI1Y2VlOTBlNWI5IiwidCI6IjQ3M2RhZThlLTg2M2MtNDE2NS1hMGE2LTk0MTA4YzhkM2UwZCJ9"
+                                frameborder="0" allowFullScreen="true"></iframe>
+                        </div>
+                    </div>
+                    <div class="card-info">
+                        <h5 class="curso-tipo">Dashboard | Vendas de Veículos</h3>
+                        <p class="empresa-descricao">Dashboard desenvolvido em Power BI, com uso de medidas, funções
+                            DAX, power query.
+                        </p>
+                        <ul class="empresa-habilidades">
+                            <li>EXCEL</li>
+                            <li>POWER BI</li>
+                            <li>SQL SERVER</li>
+                        </ul>
+                    </div>
+                </div>
+
+
+                <div class="empresa">
+                    <div class="card-imagem">
+                        <div class="iframe-container">
+                            <iframe title="dashboard_financeiro" width="600" height="373.5" src="https://app.powerbi.com/view?r=eyJrIjoiNzAwZTZhMzEtZjBhNy00ZmQ0LTlmNjgtNjFjOTRmYTgwZWMzIiwidCI6IjQ3M2RhZThlLTg2M2MtNDE2NS1hMGE2LTk0MTA4YzhkM2UwZCJ9" frameborder="0" allowFullScreen="true"></iframe>
+                        </div>
+                    </div>
+                    <div class="card-info">
+                        <h5 class="curso-tipo">Dashboard | Financeiro</h3>
+                        <p class="empresa-descricao">Dashboard desenvolvido em Power BI, com uso de filtros e funções.
+                        </p>
+                        <ul class="empresa-habilidades">
+                            <li>EXCEL</li>
+                            <li>POWER BI</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- XP5 -->
+                <div class="empresa">
+                    <div class="card-imagem">
+                        <div class="iframe-container">
+                            <iframe title="dashboard_producao" width="600" height="373.5" src="https://app.powerbi.com/view?r=eyJrIjoiYmJjN2JkMzUtYTAxNS00NDNiLWI5MzMtMTIxMzY1MGRiZTRkIiwidCI6IjQ3M2RhZThlLTg2M2MtNDE2NS1hMGE2LTk0MTA4YzhkM2UwZCJ9" frameborder="0" allowFullScreen="true"></iframe>
+                        </div>
+                    </div>
+                    <div class="card-info">
+                        <h5 class="curso-tipo">Dashboard | Produção</h3>
+                        <p class="empresa-descricao">Dashboard desenvolvido em Power BI, com uso de filtros e funções
+                            DAX.
+                        </p>
+                        <ul class="empresa-habilidades">
+                            <li>EXCEL</li>
+                            <li>POWER BI</li>
+                            <li>DAX</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- XP6 -->
+                <div class="empresa">
+                    <div class="card-imagem">
+                        <div class="iframe-container">
+                            <iframe title="dashboard_rh_hashtag" width="600" height="373.5" src="https://app.powerbi.com/view?r=eyJrIjoiMWVkODg1YTMtMzZmMC00NDlhLTk2YzUtYTA5NjgxZTdiMzNmIiwidCI6IjQ3M2RhZThlLTg2M2MtNDE2NS1hMGE2LTk0MTA4YzhkM2UwZCJ9" frameborder="0" allowFullScreen="true"></iframe>
+                        </div>
+                    </div>
+                    <div class="card-info">
+                        <h5 class="curso-tipo">Dashboard | Recursos Humano</h3>
+                        <p class="empresa-descricao">Dashboard desenvolvido em Power BI, com uso de filtros, funções DAX
+                            e tooltip.
+                        </p>
+                        <ul class="empresa-habilidades">
+                            <li>EXCEL</li>
+                            <li>POWER BI</li>
+                            <li>DAX</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- XP8 -->
+                <div class="empresa">
+                    <div class="card-imagem">
+                        <div class="iframe-container">
+                            <abbr title="caso queira ter acesso aos dashboards, por gentileza me enviar um e-mail">
+                                <img src="assets/img/img-dashboards/dash-pandas-python.png"
+                                    alt="aba de locação de veículos" height="335">
+                                <img src="assets/img/img-dashboards/dash-pandas-python-vendasporcidade.png"
+                                    alt="aba de visualização de clientes de veículos" height="335">
+                            </abbr>
+                        </div>
+                        <button class="prev" onclick="prevSlide()">&#10094;</button>
+                        <button class="next" onclick="nextSlide()">&#10095;</button>
+                    </div>
+                    <div class="card-info">
+                        <h5 class="curso-tipo">Dashboard | Vendas de Gás</h3>
+                        <p class="empresa-descricao">Dashboard desenvolvido em Python com as bibliotecas: Pandas e
+                            Matplotlib, utilizando funções, métodos para a exploração dos dados trazidos.
+                        </p>
+                        <ul class="empresa-habilidades">
+                            <li>EXCEL</li>
+                            <li>Python</li>
+                            <li>Pandas</li>
+                            <li>Matplotlib</li>
+                        </ul>
+                    </div>
+                </div>
+
+
+
+
+
+
+
+
+
+
+            </div>
+        </section>
+
+        <section id="animacao">
+            <div class="container-bouncing-balls">
+                <div class="ball"></div>
+                <div class="ball"></div>
+                <div class="ball"></div>
+            </div>
+        </section>
+
+        <section class="formacao" id="formacao" aria-label="Formação">
+            <div class="formacao-container">
+                <h2 class="subtitulo-formacao">F<br>o<br>r<br>m<br>a<br>ç<br>ã<br>o</h2>
+                <div>
+                    <ul class="curso-lista">
+                        <li class="curso">
+                            <span class="curso-tipo">Especialização</span>
+                            <h3 class="curso-qual">Análise de Dados para BI e BA</h3>
+                            <span class="curso-instituicao">UNIVERSIDADE CATÓLICA DE BRASÍLIA</span>
+                            <div class="progress">
+                                <div class="progress-bar bg-primary" role="progressbar" style="width: 25%;"
+                                    aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"><span></span></div>
+                            </div>
+                        </li>
+                        <li class="curso">
+                            <span class="curso-tipo">Tecnólogo</span>
+                            <h3 class="curso-qual">Análise e Desenvolvimento de Sistemas</h3>
+                            <span class="curso-instituicao">UNIVERSIDADE ESTÁCIO DE SÁ</span>
+                            <div class="progress">
+                                <div class="progress-bar bg-primary" role="progressbar" style="width: 100%;"
+                                    aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"><span></span></div>
+                            </div>
+                        </li>
+                        <li class="curso">
+                            <span class="curso-tipo">Técnico</span>
+                            <h3 class="curso-qual">Técnico em Informática</h3>
+                            <span class="curso-instituicao">ESCOLA TÉCNICA DE CEILÂNDIA</span>
+                            <div class="progress">
+                                <div class="progress-bar bg-primary" role="progressbar" style="width: 100%;"
+                                    aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"><span></span></div>
+                            </div>
+                        </li>
+                        <li class="curso">
+                            <span class="curso-tipo">Lingua Estrangeira</span>
+                            <h3 class="curso-qual">Inglês Específico</h3>
+                            <span class="curso-instituicao">CILT</span>
+                            <div class="progress">
+                                <div class="progress-bar bg-primary" role="progressbar" style="width: 33%;"
+                                    aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"><span></span></div>
+                            </div>
+                        </li>
+                    </ul>
+
+                    <div class="formacao-extra">
+                        <div class="cursos">
+                            <h3>Cursos Intensivos</h3>
+                            <ul>
+                                <span class="curso-instituicao">Senac</span>
+                                <li>Administrador de Banco de Dados<span>200 horas</span></li>
+                                <span class="curso-instituicao">Origamid</span>
+                                <li>UX Design & UI Design com Figma<span>17 horas</span></li>
+                                <span class="curso-instituicao">Origamid</span>
+                                <li>Front End para Iniciantes <span>26 horas</span></li>
+                                <span class="curso-instituicao">Udemy</span>
+                                <li>Desenvolvimento Web Completo <span>114 horas</span></li>
+                                <span class="curso-instituicao">Hashtag Treinamentos</span>
+                                <li>Intensivo Power BI<span> 08 horas</span></li>
+                                <span class="curso-instituicao">Udemy</span>
+                                <li>SQL Server & Power BI<span> 36 horas</span></li>
+                                <span class="curso-instituicao">Coursera</span>
+                                <li>Google Data Analytics <span> andamento</span></li>
+                                <span class="curso-instituicao">Udemy</span>
+                                <li>Banco de Dados e SQL <span> andamento</span></li>
+                                <span class="curso-instituicao">Udemy</span>
+                                <li>Análise de Dados com Pandas e Python <span> 07 horas</span></li>
+                                <span class="curso-instituicao">Udemy</span>
+                                <li>Power BI do Básico ao Avançado <span> 11 horas</span></li>
+                            </ul>
+                        </div>
+                        <div class="cursos idiomas">
+                            <h3>Idiomas</h3>
+                            <ul>
+                                <li>Inglês<span> / Intermediário</span></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            </div>
+        </section>
+
+        <section id="animacao">
+            <div class="container-bouncing-balls">
+                <div class="ball"></div>
+                <div class="ball"></div>
+                <div class="ball"></div>
+            </div>
+        </section>
+
+
+        <section id="contato" class="position-relative section">
+            <div class="container text-center">
+                <div class="contact text-left">
+                    <div class="form">
+                        <h6 class="section-title mb-3">Insira seu contato</h6>
+                        <form action="https://formspree.io/f/xvoewdod" method="POST">
+                            <div class="form-group">
+                                <input type="email" class="form-control" id="exampleInputEmail1"
+                                    aria-describedby="emailHelp" placeholder="Insira seu e-mail" required>
+                            </div>
+                            <div class="form-group">
+                                <textarea name="contact-message" id="" cols="30" rows="5" class="form-control"
+                                    placeholder="Insira uma mensagem"></textarea>
+                            </div>
+                            <button type="submit" class="btn btn-primary btn-block rounded w-lg">ENVIAR</button>
+                        </form>
+                    </div>
+                    <div class="contact-infos">
+                        <div class="item">
+                            <i class="ti-mobile"></i>
+                            <div>
+                                <h5 class="curso-tipo">WhatsApp</h5>
+                                <a href="https://api.whatsapp.com/send?phone=5561985612400"
+                                    class="social-item">Contato</a>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <i class="ti-email"></i>
+                            <div class="mb-0">
+                                <h5 class="curso-tipo">E-mail</h5>
+                                <p>fellipe.scontato@gmail.com</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            </div>
+            <div id="map">
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d169254.55532343482!2d-47.924970875738005!3d-15.715218602297746!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x935a3d18df9ae275%3A0x738470e469754a24!2zQnJhc8OtbGlhLCBERg!5e0!3m2!1spt-BR!2sbr!4v1713541885597!5m2!1spt-BR!2sbr"
+                    width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+        </section>
+
+        <section>
+            <footer class="page-footer">
+                <div class="container">
+                    <div class="row align-items-center">
+                        <p>Esta página está em constante atualização. Alguns direitos são reservados - Fellipe Melo
+                            <script>
+                                document.write(new Date().getFullYear())
+                            </script> &copy; </p>
+                    </div>
+                </div>
+            </footer>
+        </section>
+
+        <script src="assets/js/script.js"></script>
+        <script src="assets/vendors/jquery/jquery-3.4.1.js"></script>
+        <script src="assets/vendors/bootstrap/bootstrap.bundle.js"></script>
+        <script src="assets/vendors/bootstrap/bootstrap.affix.js"></script>
+        <script src="assets/js/steller.js"></script>
+
+</body>
+
+</html>

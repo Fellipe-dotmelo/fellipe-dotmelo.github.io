@@ -1,0 +1,498 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="utf-8">
+    <link rel="icon" href="assets/img/img-favicon/favicon.svg" type="image/svg+xml">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="Start your development with Steller landing page.">
+    <meta name="author" content="Fellipe Melo">
+    <meta name="description"
+        content="O site trata-se de um portfólio de Análise de Dados e BI de Fellipe Melo, com projetos autorais e projetos realizados em cursos com cases de negócios.">
+
+    <title>Fellipe Melo</title>
+    <!-- font icons -->
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <!-- Bootstrap JS, jQuery e Popper.js -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    <link rel="stylesheet" href="assets/vendors/themify-icons/css/themify-icons.css">
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;700&display=swap" rel="stylesheet">
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    <script src="https://kit.fontawesome.com/24defec40b.js" crossorigin="anonymous"></script>
+    <!-- Bootstrap + Steller main styles -->
+    <link rel="stylesheet" href="assets/css/steller.css">
+</head>
+
+<body data-spy="scroll" data-target=".navbar" data-offset="40" id="home">
+
+    <nav class="navbar navbar-expand-lg fixed-top logo" data-spy="affix" data-offset-top="0"
+        style="background: linear-gradient(0deg, rgba(14, 14, 14, 0.8), rgba(14, 14, 14, 0.8)), linear-gradient(0deg, #2e2e2e, #2e2e2e); opacity: 0.95;">
+        <div class="container">
+            <img class="header-img" src="assets/img/img-icons/logo.png" alt="Logo">
+
+            <!-- Botão de Navegação Mobile -->
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <!-- Links de Navegação -->
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ml-auto align-items-center">
+                    <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#skills">Habilidades</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#about">Sobre</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#projetos">Projetos</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#formacao">Formação</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#contato">Contato</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <script>
+        $(document).ready(function () {
+            // Alternar o menu ao clicar no botão navbar-toggler
+            $('.navbar-toggler').on('click', function () {
+                $('#navbarSupportedContent').collapse('toggle');
+            });
+
+            // Fechar o menu quando clicar em um link do menu
+            $('.navbar-nav>li>a').on('click', function () {
+                $('#navbarSupportedContent').collapse('hide');
+            });
+        });
+    </script>
+
+    <header class="header" id="home">
+        <div class="container">
+            <div class="infos">
+                <h6 class="title">Fellipe Melo</h6>
+                <p class="subtitle">Data Analitycs e Business Intelligence</p>
+                <div class="buttons pt-3">
+                    <button class="btn btn-dark rounded"><a href="Fellipe Melo - Analista de BI.pdf"
+                            download="Fellipe_Melo.pdf">DOWNLOAD CV</a></button>
+                </div>
+
+                <div class="socials mt-4">
+                    <a href="https://api.whatsapp.com/send?phone=5561985612400" class="social-item"><i
+                            class="fa-brands fa-square-whatsapp"></i></a>
+                    <abbr title="e-mail: fellipe.scontato@gmail.com">
+                        <a class="social-item" href="#contato"><i class="fa-solid fa-envelope"></i></a>
+                    </abbr>
+                    <a class="social-item" href="https://github.com/Fellipe-dotmelo/Fellipe-dotmelo"><i
+                            class="fa-brands fa-github-alt"></i></i></a>
+                    <a class="social-item" href="https://www.linkedin.com/in/fellipesmelo"><i
+                            class="fa-brands fa-linkedin"></i></a>
+                </div>
+            </div>
+            <div class="img-holder">
+                <img src="assets/img/img-profile/profile-img.png" alt="foto de perfil">
+            </div>
+        </div>
+
+    </header>
+
+    <section id="animacao">
+        <div class="container-bouncing-balls">
+            <div class="ball"></div>
+            <div class="ball"></div>
+            <div class="ball"></div>
+        </div>
+    </section>
+
+    <section id="skills" class="section mt-3">
+        <div class="container mt-5">
+            <h3>Principais Habilidades:</h3>
+        </div>
+        <div class="container mt-5">
+            <div class="skills-row">
+                <div class="skill-box text-white">
+                    <img src="assets/img/skills/painel 1.png" alt="Painel">
+                    <h5 class="curso-tipo">DATAVIZ</h5>
+                    <p>Desenvolvimento de dashboards interativos e visuais usando ferramentas como Power BI,
+                        permitindo uma compreensão clara e rápida dos dados para facilitar a tomada de decisões
+                        estratégicas.</p>
+                </div>
+                <div class="skill-box bg-secondary text-white">
+                    <img src="assets/img/skills/analise-de-dados 1.png" alt="Análise de Dados">
+                    <h5 class="curso-tipo">ANÁLISE DE DADOS</h5>
+                    <p>Implementação de soluções analíticas avançadas, otimizando processos, economizando recursos.
+                        Utilizo ferramentas como SQL Server e Power BI para transformar dados brutos em insights
+                        valiosos.</p>
+                </div>
+                <div class="skill-box bg-secondary text-white">
+                    <img src="assets/img/skills/python 1.png" alt="Python">
+                    <h5 class="curso-tipo">PYTHON</h5>
+                    <p>Automatização de processos de análise de dados e construção de modelos preditivos com Python,
+                        usando bibliotecas como Pandas, NumPy e Matplotlib para manipulação e visualização de dados.
+                    </p>
+                </div>
+                <div class="skill-box bg-secondary text-white">
+                    <img src="assets/img/skills/servidor-sql 1.png" alt="Servidor SQL">
+                    <h5 class="curso-tipo">SQL</h5>
+                    <p>Desenvolvimento de consultas eficientes e complexas em SQL para extrair, transformar e
+                        carregar dados (ETL), otimizando bancos de dados para suportar operações de análise e
+                        geração de relatórios.</p>
+                </div>
+                <div class="skill-box bg-secondary text-white">
+                    <img src="assets/img/skills/ETL-WHITE.png" alt="ETL">
+                    <h5 class="curso-tipo">ETL</h5>
+                    <p class="empresa-descricao">Processo envolve coletar dados de várias fontes, transformá-los
+                        conforme as necessidades do
+                        negócio, e carregá-los em um banco de dados ou sistema de armazenamento para análise.</p>
+                </div>
+                <div class="skill-box bg-secondary text-white">
+                    <img src="assets/img/skills/kpi.png" alt="ETL">
+                    <h5 class="curso-tipo">KPI's</h5>
+                    <p class="empresa-descricao">KPIs (Key Performance Indicators), ou Indicadores Chave de
+                        Desempenho, são métricas usadas para avaliar o sucesso de uma organização, projeto ou
+                        processo em atingir objetivos específicos.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!--
+    <section id="experiencias" class="section">
+        <div class="container mt-5">
+            <div class="row text-center text-md-left">
+                <div class="timeline">
+                    <div class="timeline-item left">
+                        <span class="year">2020 - 2023</span>
+                        <div class="description">Vert Integradora de TI - Técnico de Help Desk e NOC, suporte técnico e
+                            monitoramento.</div>
+                    </div>
+                    <div class="timeline-item right">
+                        <span class="year">2022 - 2024</span>
+                        <div class="description">Datama - Analista de Suporte, resolução de problemas, e atendimento a
+                            clientes.</div>
+                    </div>
+                    <div class="timeline-item left">
+                        <span class="year">2022 - 2023</span>
+                        <div class="description">Saitec - Analista de Suporte, monitoramento de redes e atendimento a
+                            clientes.</div>
+                    </div>
+                    <div class="timeline-item right">
+                        <span class="year">2023</span>
+                        <div class="description">Conselho Regional de Psicologia - Atividades de suporte e TI.</div>
+                    </div>
+                    <div class="timeline-item left">
+                        <span class="year">2023 - 2024</span>
+                        <div class="description">UB TECH - Assistente de TI, Analista de Dados e Business Intelligence.
+                        </div>
+                    </div>
+                    <div class="timeline-item right">
+                        <span class="year">2024</span>
+                        <div class="description">DSS - Participação em projetos e atividades de suporte e análise de
+                            dados.</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    -->
+
+    <section id="about" class="section">
+        <div class="container mt-5">
+            <div class="row text-center text-md-left">
+                <div class="col-md-4">
+                    <img src="assets/img/img-profile/pastor-analyst.png" alt="" class="col-md-10">
+                </div>
+                <div class="pl-md-4 col-md-8">
+                    <div class="container mt-5">
+                        <h6 class="title">Sobre mim</h6>
+                        <div class="row ">
+                            <p class="terminal">
+                                <span id="text"></span><span class="cursor-terminal"></span>
+
+                                <script>
+                                    const text =
+                                        "Apenas um rapaz latino americano aventurado no mercado Tech, embora o começo deste resumo seja descontraído, demonstro competências neste site. Formado em Análise e Desenvolvimento de Sistemas pela Universidade Estácio,  atualmente realizo Especialização em Análise de Dados e Business Intelligence na Universidade Católica de Brasília. Tendo mais de 4 anos de experiência na Tecnologia, atuando com Suporte Técnico, Analista de NOC, e Assistente de TI, obtendo habilidades em resolução de problemas, persuasão e ótima comunicação. Atuei também na área de Dados e então, direcionei meu foco visando crescimento na área, passei a me envolver, em processos de ETL, análise exploratória de dados e criação de Dashboards. Decidi aprender a lidar com Dados e venho solidificando minha jornada como Analista, aplicando conhecimento técnico e minha paixão pela área impulsionando o sucesso dos negócios.";
+                                    let index = 0;
+
+                                    function type() {
+                                        if (index < text.length) {
+                                            document.getElementById("text").textContent += text.charAt(index);
+                                            index++;
+                                            setTimeout(type, 100); // Ajuste o intervalo para controlar a velocidade
+                                        }
+                                    }
+
+                                    window.onload = function () {
+                                        type(); // Iniciar a digitação automática quando a página carregar
+                                    };
+                                </script>
+                            </p>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+    </section>
+
+    <section class="empresas-container" id="projetos" style="background-color: #FF7A57;">
+        <div class="experiencia-topicos">
+
+            <div class="empresa">
+                <div class="card-imagem">
+                    <div class="iframe-container">
+                        <img src="assets/img/img-dashboards/img-inspiration-dashboard.png" alt="">
+                    </div>
+                </div>
+                <div class="card-info">
+                    <h5 class="curso-tipo">Dashboards</h5>
+                    <p class="empresa-descricao">Dashboards desenvolvidos com FIGMA, EXCEL, POWER BI, SQL. Com uso de
+                        funções DAX para medidas matemáticas e métricas.
+                    </p>
+                    <ul class="empresa-habilidades">
+                        <li>EXCEL</li>
+                        <li>POWER BI</li>
+                        <li>FIGMA</li>
+                        <li>DAX</li>
+                    </ul>
+                    <a href="./dashboards.html" target="_blank" class="">
+                        <i class="fa-solid fa-magnifying-glass"></i></i>
+                        Ver detalhes
+                    </a>
+                </div>
+            </div>
+
+            <div class="empresa">
+                <div class="card-imagem">
+                    <div class="iframe-container">
+                        <img src="assets/img/img-sites/Pandas_logo.svg.png" alt="imagem pandas">
+                        </abbr>
+                    </div>
+                </div>
+                <div class="card-info">
+                    <h5 class="curso-tipo">Dashboard | Vendas de Gás</h5>
+                    <p class="empresa-descricao">Dashboard desenvolvido em Python com as bibliotecas: Pandas e
+                        Matplotlib, utilizando funções, métodos para a exploração dos dados trazidos.
+                    </p>
+                    <ul class="empresa-habilidades">
+                        <li>EXCEL</li>
+                        <li>Python</li>
+                        <li>Pandas</li>
+                        <li>Matplotlib</li>
+                    </ul>
+                    <a href="https://github.com/Fellipe-dotmelo/analiseDados" target="_blank" class="">
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                        Ver detalhes
+                    </a>
+                </div>
+            </div>
+
+            <div class="empresa">
+                <div class="card-imagem">
+                    <div class="iframe-container">
+                        <img src="assets/img/img-sites/relacionamento-table.png" alt="">
+                    </div>
+                </div>
+                <div class="card-info">
+                    <h5 class="curso-tipo">SQL | Querys e Projetos</h5>
+                    <p class="empresa-descricao">Link que direciona para o GitHub, onde estão localizados alguns
+                        projetos em SQL e consultas em diversas bases de dados. Uso para ETL, analisando dados e
+                        gerando relatórios.
+                    </p>
+                    <ul class="empresa-habilidades">
+                        <li>EXCEL</li>
+                        <li>SQL</li>
+                        <li>MODELAGEM</li>
+                    </ul>
+                    <a href="https://github.com/Fellipe-dotmelo/SQL" target="_blank" class="">
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                        Ver detalhes
+                    </a>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <section id="animacao">
+        <div class="container-bouncing-balls">
+            <div class="ball"></div>
+            <div class="ball"></div>
+            <div class="ball"></div>
+        </div>
+    </section>
+
+    <section class="formacao" id="formacao" aria-label="Formação">
+        <div class="formacao-container">
+            <h2 class="subtitulo-formacao">F<br>o<br>r<br>m<br>a<br>ç<br>ã<br>o</h2>
+            <div>
+                <ul class="curso-lista">
+                    <li class="curso">
+                        <span class="curso-tipo">Especialização</span>
+                        <h3 class="curso-qual">Análise de Dados e BI</h3>
+                        <span class="curso-instituicao">UNIVERSIDADE CATÓLICA DE BRASÍLIA</span>
+                        <div class="progress">
+                            <div class="progress-bar bg-primary" role="progressbar" style="width: 60%;"
+                                aria-valuenow="60" aria-valuemin="0" aria-valuemax="100"><span></span></div>
+                        </div>
+                    </li>
+                    <li class="curso">
+                        <span class="curso-tipo">Tecnólogo</span>
+                        <h3 class="curso-qual">Análise e Desenvolvimento de Sistemas</h3>
+                        <span class="curso-instituicao">UNIVERSIDADE ESTÁCIO DE SÁ</span>
+                        <div class="progress">
+                            <div class="progress-bar bg-primary" role="progressbar" style="width: 100%;"
+                                aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"><span></span></div>
+                        </div>
+                    </li>
+                    <li class="curso">
+                        <span class="curso-tipo">Técnico</span>
+                        <h3 class="curso-qual">Técnico em Informática</h3>
+                        <span class="curso-instituicao">ESCOLA TÉCNICA DE CEILÂNDIA</span>
+                        <div class="progress">
+                            <div class="progress-bar bg-primary" role="progressbar" style="width: 100%;"
+                                aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"><span></span></div>
+                        </div>
+                    </li>
+                    <li class="curso">
+                        <span class="curso-tipo">Lingua Estrangeira</span>
+                        <h3 class="curso-qual">Inglês Específico</h3>
+                        <span class="curso-instituicao">CILT</span>
+                        <div class="progress">
+                            <div class="progress-bar bg-primary" role="progressbar" style="width: 33%;"
+                                aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"><span></span></div>
+                        </div>
+                    </li>
+                </ul>
+
+                <div class="formacao-extra">
+                    <div class="cursos">
+                        <h3>Cursos Intensivos</h3>
+                        <ul>
+                            <span class="curso-instituicao">IFRS</span>
+                            <li>Administrador de Banco de Dados<span>200 horas</span></li>
+                            <span class="curso-instituicao">Origamid</span>
+                            <li>UX Design & UI Design com Figma<span>17 horas</span></li>
+                            <span class="curso-instituicao">Origamid</span>
+                            <li>Front End para Iniciantes <span>26 horas</span></li>
+                            <span class="curso-instituicao">Udemy</span>
+                            <li>Desenvolvimento Web Completo <span>114 horas</span></li>
+                            <span class="curso-instituicao">Hashtag Treinamentos</span>
+                            <li>Power BI<span>em andamento</span></li>
+                            <span class="curso-instituicao">Udemy</span>
+                            <li>SQL Server & Power BI<span> 36 horas</span></li>
+                            <span class="curso-instituicao">Coursera</span>
+                            <li>Google Data Analytics <span> andamento</span></li>
+                            <span class="curso-instituicao">Infinity Big Data</span>
+                            <li>Banco de Dados e SQL <span> andamento</span></li>
+                            <span class="curso-instituicao">Udemy</span>
+                            <li>Análise de Dados com Pandas e Python <span> 07 horas</span></li>
+                            <span class="curso-instituicao">Udemy</span>
+                            <li>Power BI do Básico ao Avançado <span> 11 horas</span></li>
+                        </ul>
+                    </div>
+                    <div class="cursos idiomas">
+                        <h3>Idiomas</h3>
+                        <ul>
+                            <li>Inglês<span> / Intermediário</span></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+    </section>
+
+    <section id="animacao">
+        <div class="container-bouncing-balls">
+            <div class="ball"></div>
+            <div class="ball"></div>
+            <div class="ball"></div>
+        </div>
+    </section>
+
+
+    <section id="contato" class="position-relative section">
+        <div class="container text-center">
+            <div class="contact text-left">
+                <div class="form">
+                    <h6 class="section-title mb-3" style="color: #FFF;">Insira seu contato</h6>
+                    <form action="https://formspree.io/f/xvoewdod" method="POST">
+                        <div class="form-group">
+                            <input type="email" class="form-control" id="exampleInputEmail1"
+                                aria-describedby="emailHelp" placeholder="Insira seu e-mail" required>
+                        </div>
+                        <div class="form-group">
+                            <textarea name="contact-message" id="" cols="30" rows="5" class="form-control"
+                                placeholder="Insira uma mensagem"></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary btn-block rounded w-lg">ENVIAR</button>
+                    </form>
+                </div>
+                <div class="contact-infos">
+                    <div class="item">
+                        <i class="ti-mobile"></i>
+                        <div>
+                            <h5 class="curso-tipo">WhatsApp</h5>
+                            <a href="https://api.whatsapp.com/send?phone=5561985612400" class="social-item">Contato</a>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <i class="ti-email"></i>
+                        <div class="mb-0">
+                            <h5 class="curso-tipo">E-mail</h5>
+                            <p>fellipe.scontato@gmail.com</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+        <div id="map">
+            <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d169254.55532343482!2d-47.924970875738005!3d-15.715218602297746!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x935a3d18df9ae275%3A0x738470e469754a24!2zQnJhc8OtbGlhLCBERg!5e0!3m2!1spt-BR!2sbr!4v1713541885597!5m2!1spt-BR!2sbr"
+                width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+    </section>
+
+    <section>
+        <footer class="page-footer">
+            <div class="container">
+                <div class="row align-items-center">
+                    <p>Esta página está em constante atualização. Alguns direitos são reservados - Fellipe Melo
+                        <script>
+                            document.write(new Date().getFullYear())
+                        </script> &copy; </p>
+                    <div id="cookie-banner"
+                        style="position: fixed; bottom: 0; background: #333; color: #fff; padding: 10px; width: 100%; display: none;">
+                        <p>Este site usa cookies para melhorar a experiência. <a href="/privacy-policy">Saiba
+                                mais</a>. <button id="accept-cookies">Aceitar</button></p>
+                    </div>
+
+                    <script>
+                        document.getElementById('accept-cookies').addEventListener('click', function () {
+                            document.getElementById('cookie-banner').style.display = 'none';
+                            document.cookie = "cookieConsent=true; SameSite=Lax";
+                        });
+
+                        if (document.cookie.indexOf('cookieConsent=true') === -1) {
+                            document.getElementById('cookie-banner').style.display = 'block';
+                        }
+                    </script>
+                </div>
+            </div>
+        </footer>
+    </section>
+    <script src="assets/vendors/jquery/jquery-3.4.1.js"></script>
+    <script src="assets/vendors/bootstrap/bootstrap.bundle.js"></script>
+    <script src="assets/vendors/bootstrap/bootstrap.affix.js"></script>
+    <script src="assets/js/steller.js"></script>
+</body>
+
+</html>
