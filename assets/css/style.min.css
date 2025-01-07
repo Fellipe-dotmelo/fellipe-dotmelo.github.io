@@ -408,9 +408,7 @@ ul {
 .curso-lista {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  /* Duas colunas com largura mínima de 300px */
   gap: 10px;
-  /* Espaçamento entre os cursos */
   margin-bottom: 60px;
 }
 
@@ -421,6 +419,7 @@ ul {
   border-radius: 4px;
   display: flex;
   flex-direction: column;
+  position: relative; /* Necessário para o posicionamento absoluto do percentual */
 }
 
 .curso::before {
@@ -429,8 +428,8 @@ ul {
   width: 4px;
   height: 20px;
   background: var(--cor-destaque);
-  position: relative;
-  top: 50px;
+  position: absolute;
+  top: 20px;
   left: -24px;
 }
 
@@ -458,6 +457,16 @@ ul {
 .cursos {
   margin-bottom: 60px;
 }
+
+.completion-percentage {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  color: #ff5722; /* mesma cor da barrinha laranja */
+  font-weight: bold;
+  font-size: 0.875rem; /* Ajuste para manter o tamanho da fonte consistente */
+}
+
 
 .formacao-extra h3 {
   font-size: 1.25rem;
