@@ -866,7 +866,7 @@ pre code {
   position: relative;
   background: linear-gradient(0deg, rgba(14, 14, 14, 0.8), rgba(14, 14, 14, 0.8)), linear-gradient(0deg, #2e2e2e, #2e2e2e);
   flex: 1;
-  padding: 15px;
+  padding: 10px;
   border-radius: 4px;
   display: flex;
   flex-direction: column;
@@ -935,11 +935,11 @@ pre code {
   content: '';
   display: block;
   width: 8px;
-  height: 20px;
+  height: 17px;
   background: var(--primary);
   position: relative;
   top: 22px;
-  left: -20px;
+  left: -15.55px;
 }
 
 .curso-instituicao-intensiva::before {
