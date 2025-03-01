@@ -662,14 +662,9 @@ pre code {
   border-top: solid 1.5px var(--dark);
 }
 
-.empresa-titulo {
-  margin-bottom: 10px;
-}
-
 .empresa-descricao {
   font-size: 1.115rem;
   line-height: 1.4;
-  margin-bottom: 10px;
   position: relative;
   color: var(--light);
   flex-grow: 1;
@@ -677,14 +672,14 @@ pre code {
 
 .card-info {
   border-radius: 0 0 5px 5px;
-  padding: 16px;
+  padding: 15px;
   background: linear-gradient(0deg, rgba(14, 14, 14, 0.8), rgba(14, 14, 14, 0.8)), linear-gradient(0deg, #2e2e2e, #2e2e2e);
   opacity: 0.95;
   min-width: 370px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  height: 100%;
+  height: 80%;
   box-sizing: border-box;
   color: #fff;
 }
@@ -702,7 +697,7 @@ pre code {
 
 .empresa-habilidades {
   list-style: none;
-  padding: 0;
+  padding: 25px 0 0 0;
   margin: 0;
   display: flex;
   justify-content: center; /* Centraliza as habilidades no meio */
@@ -765,6 +760,28 @@ pre code {
   line-height: 1.4;
   color: var(--cor-empresa-texto);
 }
+
+    /* Estilização da lista de insights */
+    .insights-lista {
+      list-style: none;
+      padding: 0;
+      margin: 10px 0;
+    }
+    
+    .insights-lista li {
+      padding: 2.5px 12px;
+      margin: 5px 0;
+      border-radius: 5px;
+      display: flex;
+      align-items: center;
+      font-size: 0.95em;
+    }
+    
+    .insights-lista li i  {
+      font-size: 15pt;
+      margin-right: 5px;
+      color: var(--primary); /* Exemplo de cor laranja, ajuste conforme necessário */
+    }
 
 /* Estilos para o contêiner do iframe */
 .iframe-container {
