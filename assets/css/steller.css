@@ -769,12 +769,14 @@ pre code {
     }
     
     .insights-lista li {
+      list-style: none;
       padding: 2.5px 12px;
       margin: 5px 0;
       border-radius: 5px;
       display: flex;
       align-items: center;
       font-size: 0.95em;
+      
     }
     
     .insights-lista li i  {
