@@ -791,7 +791,7 @@ pre code {
   width: 100%;
   padding-bottom: 0;
   /* Proporção de 16:9 */
-  height: 277px;
+  height: 240px;
   overflow: hidden;
   border-top-left-radius: 10px;
   border-top-right-radius: 10px;
@@ -817,7 +817,6 @@ pre code {
   margin: 0 auto;
   /* Centralizar horizontalmente */
 }
-
 
 .ball {
   width: 25px;
@@ -1049,11 +1048,14 @@ pre code {
     gap: 30px;
   }
 
-  .card-imagem .iframe-container img {
+
+  .iframe-container img {
     object-fit: cover;
     object-position: center;
     border-radius: 10px 10px 0 0;
-    min-width: 100%;
+    width: 100%;
+    height: 260px; /* Aumentando a altura */
+    max-height: 100%;
   }
 
   .experiencia-topicos {
