@@ -74,12 +74,16 @@
     <header class="header" id="home">
         <div class="container">
             <div class="infos">
-                <h6 class="title">Fellipe Melo</h6>
-                <p class="subtitle pt-1">Data Analitycs e Business Intelligence</p>
+                <h1 class="title">Fellipe Melo</h1>
+                <p class="subtitle pt-1">Data Analytics | Business Intelligence</p>
+                <hr class="tagline-divider">
+                <p class="subtitle pt-2">Transformando Dados em Decisões Estratégicas</p>
+
                 <div class="d-flex gap-2 pt-1">
                     <!-- Botão de Download -->
                     <button class="btn btn-dark rounded">
                         <a href="Fellipe Melo - Analista de Dados.pdf" download="Fellipe_Melo.pdf" style="text-decoration:none">
+                            <i class="fa-solid fa-download fa-lg"></i>
                             DOWNLOAD CV
                         </a>
                     </button>
@@ -88,6 +92,7 @@
                     <button class="btn btn-dark rounded">
                         <a href="https://drive.google.com/file/d/1jCiTvscBy8GAoJdakW7BQ1yeEnXX8Y8U/view?usp=sharing" target="_blank" class="icon-btn">
                             <i class="fa-solid fa-eye fa-lg"></i>
+                            VIZUALIZAR CV
                         </a>
                     </button>
                     
@@ -107,17 +112,60 @@
                 </div>
             </div>
             <div class="img-holder">
-                <img src="assets/img/img-profile/profile-img.png" alt="foto de perfil">
+                <img src="assets/img/img-profile/new-profile.png" alt="foto de perfil">
             </div>
         </div>
 
+  <div id="transition-ferramentas" class="container">
+    <div class="card">
+      <div class="ticker" id="tf-ticker" style="--speed: 22s; --gap: 36px;">
+        <div class="track" id="tools-track"><!-- gerado via JS --></div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    // ===== Configurável: coloque seus caminhos certos aqui =====
+    const tools = [
+      { name: 'SQL Server', img: '/assets/img/img-tools/sql_server.png' },
+      { name: 'Power BI',   img: '/assets/img/img-tools/icons8-power-bi-2021-48.svg' },
+      { name: 'Figma',      img: '/assets/img/img-tools/icons8-figma-48.svg' },
+      { name: 'Excel',      img: '/assets/img/img-tools/icons8-excel-48.svg' },
+      { name: 'Python',     img: '/assets/img/img-tools/icons8-python-48.svg' }
+    ];
+
+    const track = document.getElementById('tools-track');
+
+    function createToolEl(tool){
+      const span = document.createElement('span');
+      span.className = 'tool';
+      const img = document.createElement('img');
+      img.src = tool.img; img.alt = tool.name;
+      img.onerror = () => { span.classList.add('no-img'); img.remove(); };
+      span.appendChild(img);
+      span.appendChild(document.createTextNode(tool.name));
+      return span;
+    }
+
+    function rebuildTrack(){
+      track.innerHTML = '';
+      // Renderiza todos os itens na sequência
+      tools.forEach(tool => track.appendChild(createToolEl(tool)));
+      // Duplica a lista para looping
+      tools.forEach(tool => track.appendChild(createToolEl(tool)));
+    }
+
+    rebuildTrack();
+    // Recalcula em resize para manter preenchido
+    let tf;
+    window.addEventListener('resize', ()=>{ clearTimeout(tf); tf = setTimeout(rebuildTrack, 150); });
+  </script>
+
+
     </header>
 
-    <section id="animacao">
-        <div class="container-bouncing-balls" id="habilidades">
-            <div class="ball"></div>
-            <div class="ball"></div>
-            <div class="ball"></div>
+        <section id="animacao">
+        <div class="container-bouncing-balls" id="habilidades"  id="formacao">
         </div>
     </section>
 
@@ -220,15 +268,15 @@
                     <img src="assets/img/img-profile/memoji-profilev1.png" alt="" class="col-md-10">
                 </div>
                 <div class="pl-md-4 col-md-8">
-                    <div class="container mt-5">
-                        <h6 class="title">Sobre mim</h6>
+                    <div class="container mt-4">
+                        <h6 class="title"></h6>
                         <div class="row ">
                             <p class="terminal">
                                 <span id="text"></span><span class="cursor-terminal"></span>
 
                                 <script>
                                     const text =
-                                        "Apenas um rapaz latino americano aventurado no mercado Tech, embora o começo deste resumo seja descontraído, demonstro competências neste site. Sou um Analista de Dados em transição no mercado Tech, com formação em Análise e Desenvolvimento de Sistemas pela Universidade Estácio e especialização em Data Analytics e Business Intelligence pela Universidade Católica de Brasília. Com mais de 4 anos de experiência em Tecnologia, comecei minha jornada na área de Suporte Técnico, onde desenvolvi fortes habilidades de resolução de problemas e comunicação. Recentemente, foquei em Dados, adquirindo experiência em processos de ETL, análise exploratória e criação de dashboards com Excel, Power BI e SQL para gerar insights estratégicos. Estou em constante evolução, estudo Python, Excel, SQL e Power BI, explorando o storytelling de dados e métricas de negócio para aprimorar minha visão analítica. Determinado a solidificar minha trajetória em Análise de Dados, busco aplicar meu conhecimento para agregar valor e impacto aos negócios.";
+                                        "Apenas um rapaz latino-americano se aventurando no mercado Tech. Apesar do tom descontraído, construí uma trajetória sólida em tecnologia e dados. Sou Analista de Dados em transição, formado em Análise e Desenvolvimento de Sistemas pela Universidade Estácio e com especialização em Data Analytics e Business Intelligence pela Universidade Católica de Brasília. Tenho mais de 5 anos de experiência em Tecnologia, iniciando em Suporte Técnico e, nos últimos anos, focando em Dados, com atuação em ETL, análise exploratória e desenvolvimento de dashboards em Excel, Power BI e SQL. Atualmente, atuo como Analista de Sistemas Jr. – Tasy (Philips) no Home Hospital Ortopédico e Medicina Especializada, sendo responsável por parametrização de módulos, revisão de processos, criação de relatórios em SQL/PL-SQL, treinamentos de usuários e suporte a diferentes áreas. Também participo da implantação de novos módulos e melhorias contínuas, adquirindo conhecimento funcional nos processos hospitalares e contribuindo para a eficiência operacional da instituição. Paralelamente, sigo em constante evolução, aprimorando habilidades em Python, SQL, Excel e Power BI, com foco em storytelling de dados e métricas de negócio. Determinado a consolidar minha carreira em Análise de Dados, busco aplicar meu conhecimento para gerar insights estratégicos e impacto positivo nos negócios.";
                                     let index = 0;
 
                                     function type() {
@@ -433,14 +481,12 @@
                             <li>Power BI For Data Analytics<span>36 horas</span></li>
                             <span class="curso-instituicao">Yto Nihon</span>
                             <li>Figma For Data Analitycs<span>12 horas</span></li>
-                            <span class="curso-instituicao">Infinity Big Data</span>
-                            <li>Excel Avançado <span> em andamento</span></li>
+                            <span class="curso-instituicao">Yto Nihon</span>
+                            <li>SQL Server For Data Analitycs<span>33 horas</span></li>
                             <span class="curso-instituicao">Hashtag Treinamentos</span>
                             <li>Power BI<span>em andamento</span></li>
                             <span class="curso-instituicao">Hashtag Treinamentos</span>
                             <li>Python<span>em andamento</span></li>
-                            <span class="curso-instituicao">Yto Nihon</span>
-                            <li>SQL Server For Data Analitycs<span>em andamento </span></li>
                         </ul>
                     </div>
                     <div class="cursos idiomas">
@@ -493,7 +539,7 @@
                         <i class="fa-solid fa-envelope"></i>
                         <div class="mb-0">
                             <h5 class="curso-tipo">E-mail</h5>
-                            <p>fellipe.scontato@gmail.com</p>
+                            <p class="social-item" style="color: #FF7A57;">fellipe.scontato@gmail.com</p>
                         </div>
                     </div>
                 </div>
