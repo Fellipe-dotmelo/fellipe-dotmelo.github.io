@@ -1,0 +1,474 @@
+/* =========================================
+   DASHBOARDS PAGE
+========================================= */
+
+body{
+    background:#ff7a57;
+}
+
+/* =========================================
+   SECTION
+========================================= */
+
+.empresas-container{
+    background:#ff7a57;
+    padding:140px 0 120px;
+    overflow:hidden;
+}
+
+.experiencia-topicos{
+    width:min(1400px,92vw);
+    margin:0 auto;
+
+    display:grid;
+
+    grid-template-columns:
+    repeat(auto-fit,minmax(340px,1fr));
+
+    gap:32px;
+}
+
+/* =========================================
+   CARD
+========================================= */
+
+.empresa{
+    background:#0f1115;
+
+    border-radius:26px;
+
+    overflow:hidden;
+
+    border:
+    1px solid rgba(255,255,255,.06);
+
+    box-shadow:
+    0 18px 40px rgba(0,0,0,.14);
+
+    transition:
+    transform .28s ease,
+    box-shadow .28s ease;
+
+    display:flex;
+    flex-direction:column;
+
+    min-height:100%;
+}
+
+.empresa:hover{
+    transform:translateY(-8px);
+
+    box-shadow:
+    0 24px 50px rgba(0,0,0,.22);
+}
+
+/* =========================================
+   IMAGE
+========================================= */
+
+.card-imagem{
+    width:100%;
+    aspect-ratio:16/9;
+
+    overflow:hidden;
+
+    background:#1a1a1a;
+}
+
+.card-imagem img{
+    width:100%;
+    height:100%;
+
+    object-fit:cover;
+
+    transition:
+    transform .35s ease;
+}
+
+.empresa:hover .card-imagem img{
+    transform:scale(1.03);
+}
+
+/* =========================================
+   BODY
+========================================= */
+
+.card-info{
+    padding:30px;
+
+    display:flex;
+    flex-direction:column;
+
+    flex:1;
+}
+
+/* =========================================
+   CATEGORY
+========================================= */
+
+.curso-tipo{
+    color:#ff7a57;
+
+    font-size:12px;
+    font-weight:800;
+
+    letter-spacing:.8px;
+
+    text-transform:uppercase;
+
+    margin-bottom:16px;
+}
+
+/* =========================================
+   TITLE
+========================================= */
+
+.card-info h3{
+    color:#fff;
+
+    font-size:34px;
+    font-weight:800;
+
+    margin-bottom:18px;
+}
+
+/* =========================================
+   DESCRIPTION
+========================================= */
+
+.empresa-descricao{
+    color:rgba(255,255,255,.78);
+
+    line-height:1.9;
+
+    font-size:15px;
+
+    margin-bottom:26px;
+}
+
+/* =========================================
+   INSIGHTS
+========================================= */
+
+.insights-lista{
+    list-style:none;
+
+    padding:0;
+
+    margin:0 0 28px;
+}
+
+.insights-lista li{
+    color:rgba(255,255,255,.72);
+
+    display:flex;
+    align-items:flex-start;
+
+    gap:10px;
+
+    line-height:1.7;
+
+    margin-bottom:12px;
+
+    font-size:14px;
+}
+
+.insights-lista i{
+    color:#ff7a57;
+
+    font-size:13px;
+
+    margin-top:5px;
+}
+
+/* =========================================
+   TAGS
+========================================= */
+
+.empresa-habilidades{
+    display:flex;
+
+    flex-wrap:wrap;
+
+    gap:10px;
+
+    padding:0;
+
+    margin:0 0 28px;
+
+    list-style:none;
+}
+
+.empresa-habilidades li{
+    background:#fff;
+
+    color:#1f2329;
+
+    padding:8px 12px;
+
+    border-radius:10px;
+
+    font-size:11px;
+    font-weight:800;
+
+    letter-spacing:.3px;
+}
+
+/* =========================================
+   BUTTON
+========================================= */
+
+.card-info a{
+    margin-top:auto;
+
+    width:100%;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    gap:10px;
+
+    background:#ececec;
+
+    color:#1f2329;
+
+    padding:16px;
+
+    border-radius:14px;
+
+    font-weight:800;
+
+    text-decoration:none;
+
+    transition:
+    background .25s ease,
+    transform .25s ease;
+}
+
+.card-info a:hover{
+    background:#fff;
+
+    color:#000;
+
+    transform:translateY(-2px);
+}
+
+.card-info a i{
+    font-size:15px;
+}
+
+/* =========================================
+   CONTATO
+========================================= */
+
+#contato{
+    background:#ececec;
+
+    padding:120px 0 80px;
+}
+
+.contact{
+    width:min(1200px,92vw);
+
+    margin:0 auto;
+
+    background:#111317;
+
+    border-radius:30px;
+
+    overflow:hidden;
+
+    display:grid;
+
+    grid-template-columns:1fr 420px;
+
+    box-shadow:
+    0 20px 50px rgba(0,0,0,.16);
+}
+
+.contact-infos{
+    padding:60px 50px;
+
+    background:
+    linear-gradient(
+        180deg,
+        rgba(255,122,87,.08),
+        transparent
+    );
+}
+
+.contact-infos .item{
+    display:flex;
+
+    align-items:flex-start;
+
+    gap:18px;
+
+    margin-bottom:36px;
+}
+
+.contact-infos .item i{
+    width:52px;
+    height:52px;
+
+    border-radius:50%;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    background:
+    rgba(255,122,87,.12);
+
+    color:#ff7a57;
+
+    font-size:18px;
+}
+
+.contact-infos h5{
+    color:#fff;
+
+    font-size:14px;
+
+    margin-bottom:6px;
+}
+
+.contact-infos a,
+.contact-infos p{
+    color:rgba(255,255,255,.7);
+
+    text-decoration:none;
+
+    margin:0;
+}
+
+/* =========================================
+   MAP
+========================================= */
+
+#map iframe{
+    width:100%;
+    height:420px;
+
+    border:none;
+
+    display:block;
+}
+
+/* =========================================
+   FOOTER
+========================================= */
+
+.page-footer{
+    background:#0f1115;
+
+    padding:28px 0;
+
+    text-align:center;
+}
+
+.page-footer p{
+    color:rgba(255,255,255,.6);
+
+    margin:0;
+
+    font-size:14px;
+}
+
+/* =========================================
+   RESPONSIVO
+========================================= */
+
+@media(max-width:992px){
+
+    .experiencia-topicos{
+        grid-template-columns:1fr;
+    }
+
+    .contact{
+        grid-template-columns:1fr;
+    }
+
+    .contact-infos{
+        padding:40px 30px;
+    }
+}
+
+@media(max-width:768px){
+
+    .empresas-container{
+        padding:120px 0 80px;
+    }
+
+    .card-info{
+        padding:24px;
+    }
+
+    .empresa-descricao{
+        font-size:14px;
+    }
+
+    .card-info a{
+        padding:14px;
+    }
+}
+
+/* =========================================
+   FIX CONTATO
+========================================= */
+
+.contact-section {
+    background: #ececec !important;
+
+    padding: 120px 0 80px !important;
+}
+
+.contact-wrapper {
+    width: min(1300px, 92vw);
+
+    margin: 0 auto;
+
+    display: grid;
+
+    grid-template-columns: 1fr 520px;
+
+    border-radius: 28px;
+
+    overflow: hidden;
+
+    background: #111317;
+
+    box-shadow:
+    0 24px 60px rgba(0,0,0,.16);
+}
+
+.contact-content {
+    padding: 70px 60px;
+}
+
+.contact-map iframe {
+    width: 100%;
+    height: 100%;
+
+    min-height: 620px;
+
+    border: none;
+
+    display: block;
+}
+
+@media(max-width:992px){
+
+    .contact-wrapper{
+        grid-template-columns:1fr;
+    }
+
+    .contact-content{
+        padding:50px 30px;
+    }
+
+    .contact-map iframe{
+        min-height:420px;
+    }
+}

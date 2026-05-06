@@ -1,0 +1,280 @@
+/* =========================================
+   NAVBAR
+========================================= */
+
+.custom-navbar {
+  position: fixed;
+
+  top: 0;
+  left: 0;
+
+  width: 100%;
+
+  z-index: 999;
+
+  background:
+    rgba(15,15,15,.82);
+
+  backdrop-filter: blur(14px);
+
+  border-bottom:
+    1px solid rgba(255,255,255,.04);
+
+  transition:
+    background .3s ease,
+    border-color .3s ease,
+    padding .3s ease;
+}
+
+/* container */
+
+.custom-navbar .container {
+  width: min(1380px, 92vw);
+
+  margin: 0 auto;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+
+  padding: 18px 0;
+}
+
+/* =========================================
+   LOGO
+========================================= */
+
+.custom-navbar .logo {
+  display: flex;
+
+  align-items: center;
+
+  gap: 12px;
+
+  text-decoration: none;
+}
+
+.custom-navbar .logo img {
+  height: 46px;
+
+  width: auto;
+
+  object-fit: contain;
+}
+
+/* fallback texto */
+
+.custom-navbar .logo-text {
+  color: #fff;
+
+  font-size: 34px;
+
+  font-weight: 800;
+
+  line-height: 1;
+
+  letter-spacing: -.5px;
+}
+
+/* =========================================
+   MENU
+========================================= */
+
+.custom-navbar .nav {
+  display: flex;
+
+  align-items: center;
+
+  gap: 38px;
+
+  margin: 0;
+  padding: 0;
+
+  list-style: none;
+}
+
+/* link */
+
+.custom-navbar .nav-link {
+  position: relative;
+
+  color: rgba(255,255,255,.74);
+
+  text-decoration: none;
+
+  font-size: 13px;
+
+  font-weight: 700;
+
+  letter-spacing: 1px;
+
+  text-transform: uppercase;
+
+  transition:
+    color .25s ease;
+}
+
+/* hover */
+
+.custom-navbar .nav-link:hover {
+  color: #ff7a57;
+}
+
+/* underline elegante */
+
+.custom-navbar .nav-link::after {
+  content: "";
+
+  position: absolute;
+
+  left: 0;
+  bottom: -10px;
+
+  width: 0%;
+  height: 2px;
+
+  background: #ff7a57;
+
+  border-radius: 999px;
+
+  transition: width .25s ease;
+}
+
+.custom-navbar .nav-link:hover::after {
+  width: 100%;
+}
+
+/* active */
+
+.custom-navbar .nav-link.active {
+  color: #ff7a57;
+}
+
+.custom-navbar .nav-link.active::after {
+  width: 100%;
+}
+
+/* =========================================
+   MOBILE BUTTON
+========================================= */
+
+.custom-navbar .navbar-toggler {
+  border: none;
+
+  background: transparent;
+
+  box-shadow: none;
+
+  outline: none;
+}
+
+.custom-navbar .navbar-toggler i {
+  color: #fff;
+
+  font-size: 22px;
+}
+
+/* =========================================
+   SCROLL EFFECT
+========================================= */
+
+.custom-navbar.scrolled {
+  background:
+    rgba(10,10,10,.92);
+
+  border-bottom:
+    1px solid rgba(255,255,255,.06);
+}
+
+/* =========================================
+   RESPONSIVO
+========================================= */
+
+@media (max-width: 992px) {
+
+  .custom-navbar .container {
+    padding: 16px 0;
+  }
+
+  .custom-navbar .nav {
+    gap: 24px;
+  }
+
+  .custom-navbar .logo-text {
+    font-size: 30px;
+  }
+}
+
+@media (max-width: 768px) {
+
+  .custom-navbar .container {
+    padding: 14px 0;
+  }
+
+  .custom-navbar .logo img {
+    height: 40px;
+  }
+
+  .custom-navbar .logo-text {
+    font-size: 26px;
+  }
+
+  .custom-navbar .nav {
+    position: fixed;
+
+    top: 72px;
+    left: 0;
+
+    width: 100%;
+
+    flex-direction: column;
+
+    gap: 24px;
+
+    background:
+      rgba(15,15,15,.96);
+
+    backdrop-filter: blur(16px);
+
+    padding: 36px 0;
+
+    border-top:
+      1px solid rgba(255,255,255,.04);
+
+    transform: translateY(-120%);
+
+    opacity: 0;
+
+    pointer-events: none;
+
+    transition:
+      transform .3s ease,
+      opacity .3s ease;
+  }
+
+  .custom-navbar .nav.show {
+    transform: translateY(0);
+
+    opacity: 1;
+
+    pointer-events: auto;
+  }
+
+  .custom-navbar .nav-link {
+    font-size: 14px;
+  }
+}
+
+.custom-navbar .logo img {
+  width: auto;
+  height: 55px;
+  object-fit: contain;
+  display: block;
+  transform: scale(1.8);
+  transform-origin: left center;
+  transition:
+    transform .25s ease,
+    filter .25s ease;
+}

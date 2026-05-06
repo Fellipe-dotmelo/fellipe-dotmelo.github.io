@@ -28,93 +28,193 @@
     <script src="https://kit.fontawesome.com/24defec40b.js" crossorigin="anonymous"></script>
     <!-- Bootstrap + Steller main styles -->
     <link rel="stylesheet" href="assets/css/steller.css">
+    <link rel="stylesheet" href="assets/css/contato.css">
+    <link rel="stylesheet" href="assets/css/formacao.css">
+    <link rel="stylesheet" href="assets/css/projetos.css">
+    <link rel="stylesheet" href="assets/css/sobre.css">
+    <link rel="stylesheet" href="assets/css/habilidades.css">
+    <link rel="stylesheet" href="assets/css/hero.css">
+    <link rel="stylesheet" href="assets/css/navbar.css">
+    
 </head>
 
 <body data-spy="scroll" data-target=".navbar" data-offset="40" id="home">
 
-    <nav class="navbar navbar-expand-lg fixed-top logo" data-spy="affix" data-offset-top="0"
-        style="background: linear-gradient(0deg, rgba(14, 14, 14, 0.8), rgba(14, 14, 14, 0.8)), linear-gradient(0deg, #2e2e2e, #2e2e2e); opacity: 0.95;">
-        <div class="container">
-            <img class="header-img" src="assets/img/img-icons/logo.png" alt="Logo">
+    <nav class="custom-navbar">
 
-            <!-- Botão de Navegação Mobile -->
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
-                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
+    <div class="container">
 
-            <!-- Links de Navegação -->
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav ml-auto align-items-center">
-                    <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#habilidades">Habilidades</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#about">Sobre</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#projetos">Projetos</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#formacao">Formação</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#contato">Contato</a></li>
-                </ul>
+        <!-- LOGO -->
+        <a href="#home" class="logo">
+            <img src="assets/img/logo.png">
+        </a>
+
+        <!-- MENU -->
+        <ul class="nav" id="navMenu">
+
+            <li>
+                <a href="#home" class="nav-link active">
+                    Home
+                </a>
+            </li>
+
+            <li>
+                <a href="#habilidades" class="nav-link">
+                    Habilidades
+                </a>
+            </li>
+
+            <li>
+                <a href="#sobre" class="nav-link">
+                    Sobre
+                </a>
+            </li>
+
+            <li>
+                <a href="#projetos" class="nav-link">
+                    Projetos
+                </a>
+            </li>
+
+            <li>
+                <a href="#formacao" class="nav-link">
+                    Formação
+                </a>
+            </li>
+
+            <li>
+                <a href="#contato" class="nav-link">
+                    Contato
+                </a>
+            </li>
+
+        </ul>
+
+        <!-- MOBILE -->
+        <button class="navbar-toggler" id="menuToggle">
+
+            <i class="fa-solid fa-bars"></i>
+
+        </button>
+
+    </div>
+
+</nav>
+
+<script>
+
+const toggle = document.getElementById('menuToggle');
+const nav = document.getElementById('navMenu');
+
+toggle.addEventListener('click', () => {
+  nav.classList.toggle('show');
+});
+
+window.addEventListener('scroll', () => {
+
+  const navbar = document.querySelector('.custom-navbar');
+
+  navbar.classList.toggle(
+    'scrolled',
+    window.scrollY > 20
+  );
+
+});
+
+</script>
+
+   <section id="home" class="hero-section">
+
+    <div class="hero-container">
+
+        <!-- LEFT -->
+        <div class="hero-content">
+
+            <span class="hero-badge">
+                DATA ANALYTICS • BUSINESS INTELLIGENCE
+            </span>
+
+            <h1>
+                Transformando dados em decisões estratégicas.
+            </h1>
+
+            <p>
+                Analista de Dados especializado em dashboards,
+                SQL, Power BI, ETL e visualização estratégica.
+            </p>
+
+            <!-- BUTTONS -->
+            <div class="hero-buttons">
+
+                <a href="Fellipe Melo.pdf"
+                   download="Fellipe_Melo.pdf"
+                   class="hero-btn primary">
+
+                    <i class="fa-solid fa-download"></i>
+
+                    Download CV
+
+                </a>
+
+                <a href="https://drive.google.com/file/d/15FV9O1Tqmwc4TmQrXl16S-eKu85OvgNG/view?usp=sharing"
+                   target="_blank"
+                   class="hero-btn secondary">
+
+                    <i class="fa-solid fa-eye"></i>
+
+                    Visualizar CV
+
+                </a>
+
             </div>
+
+            <!-- SOCIAL -->
+            <div class="hero-social">
+
+                <a href="https://api.whatsapp.com/send?phone=5561985612400"
+                   target="_blank">
+
+                    <i class="fa-brands fa-whatsapp"></i>
+
+                </a>
+
+                <a href="#contato">
+
+                    <i class="fa-solid fa-envelope"></i>
+
+                </a>
+
+                <a href="https://github.com/Fellipe-dotmelo/Fellipe-dotmelo"
+                   target="_blank">
+
+                    <i class="fa-brands fa-github"></i>
+
+                </a>
+
+                <a href="https://www.linkedin.com/in/fellipesmelo"
+                   target="_blank">
+
+                    <i class="fa-brands fa-linkedin"></i>
+
+                </a>
+
+            </div>
+
         </div>
-    </nav>
 
-    <script>
-        $(document).ready(function () {
-            // Alternar o menu ao clicar no botão navbar-toggler
-            $('.navbar-toggler').on('click', function () {
-                $('#navbarSupportedContent').collapse('toggle');
-            });
+        <!-- RIGHT -->
+        <div class="hero-image">
 
-            // Fechar o menu quando clicar em um link do menu
-            $('.navbar-nav>li>a').on('click', function () {
-                $('#navbarSupportedContent').collapse('hide');
-            });
-        });
-    </script>
+            <div class="hero-image-glow"></div>
 
-    <header class="header" id="home">
-        <div class="container">
-            <div class="infos">
-                <h1 class="title">Fellipe Melo</h1>
-                <p class="subtitle pt-1">Data Analytics | Business Intelligence</p>
-                <hr class="tagline-divider">
-                <p class="subtitle pt-2">Transformando Dados em Decisões Estratégicas</p>
+            <img src="assets/img/img-profile/new-profile.png"
+                 alt="Fellipe Melo">
 
-                <div class="d-flex gap-2 pt-1">
-                    <!-- Botão de Download -->
-                    <button class="btn btn-dark rounded">
-                        <a href="Fellipe Melo - Analista de Sistemas e Dados.pdf" download="Fellipe_Melo.pdf" style="text-decoration:none">
-                            <i class="fa-solid fa-download fa-lg"></i>
-                            DOWNLOAD CV
-                        </a>
-                    </button>
-                
-                    <!-- Botão de Visualização -->
-                    <button class="btn btn-dark rounded">
-                        <a href="https://drive.google.com/file/d/1NyYQ5HYYPlmhy_F_g0C1mdBc_97ECOu_/view?usp=sharing" target="_blank" class="icon-btn">
-                            <i class="fa-solid fa-eye fa-lg"></i>
-                            VIZUALIZAR CV
-                        </a>
-                    </button>
-                    
-                </div>
-                
-
-                <div class="socials mt-4">
-                    <a href="https://api.whatsapp.com/send?phone=5561985612400" class="social-item"><i
-                            class="fa-brands fa-square-whatsapp"></i></a>
-                    <abbr title="e-mail: fellipe.scontato@gmail.com">
-                        <a class="social-item" href="#contato"><i class="fa-solid fa-envelope"></i></a>
-                    </abbr>
-                    <a class="social-item" href="https://github.com/Fellipe-dotmelo/Fellipe-dotmelo"><i
-                            class="fa-brands fa-github-alt"></i></i></a>
-                    <a class="social-item" href="https://www.linkedin.com/in/fellipesmelo"><i
-                            class="fa-brands fa-linkedin"></i></a>
-                </div>
-            </div>
-            <div class="img-holder">
-                <img src="assets/img/img-profile/new-profile.png" alt="foto de perfil">
-            </div>
         </div>
+
+    </div>
+
+</section>
 
   <div id="transition-ferramentas" class="container">
     <div class="card">
@@ -161,384 +261,727 @@
     window.addEventListener('resize', ()=>{ clearTimeout(tf); tf = setTimeout(rebuildTrack, 150); });
   </script>
 
+<section id="habilidades" class="habilidades-section">
 
-    </header>
+    <div class="habilidades-container">
 
-        <section id="animacao">
-        <div class="container-bouncing-balls" id="habilidades"  id="formacao">
+        <!-- LEFT -->
+        <div class="habilidades-side">
+
+            <span class="habilidades-vertical">
+                SKILLS
+            </span>
+
         </div>
-    </section>
 
-    <section id="skills" class="section mt-3">
-        <div class="container mt-5">
-            <h3>Principais Habilidades:</h3>
-        </div>
-        <div class="container mt-5">
-            <div class="skills-row">
-                <div class="skill-box text-white">
-                    <img src="assets/img/skills/painel 1.png" alt="Painel">
-                    <h5 class="curso-tipo">DATAVIZ</h5>
-                    <p>Desenvolvimento de dashboards interativos e visuais usando ferramentas como Power BI,
-                        permitindo uma compreensão clara e rápida dos dados para facilitar a tomada de decisões
-                        estratégicas.</p>
-                </div>
-                <div class="skill-box bg-secondary text-white">
-                    <img src="assets/img/skills/analise-de-dados 1.png" alt="Análise de Dados">
-                    <h5 class="curso-tipo">ANÁLISE DE DADOS</h5>
-                    <p>Implementação de soluções analíticas avançadas, otimizando processos, economizando recursos.
-                        Utilizo ferramentas como SQL Server e Power BI para transformar dados brutos em insights
-                        valiosos.</p>
-                </div>
-                <div class="skill-box bg-secondary text-white">
-                    <img src="assets/img/skills/python 1.png" alt="Python">
-                    <h5 class="curso-tipo">PYTHON</h5>
-                    <p>Automatização de processos de análise de dados e construção de modelos preditivos com Python,
-                        usando bibliotecas como Pandas, NumPy e Matplotlib para manipulação e visualização de dados.
-                    </p>
-                </div>
-                <div class="skill-box bg-secondary text-white">
-                    <img src="assets/img/skills/servidor-sql 1.png" alt="Servidor SQL">
-                    <h5 class="curso-tipo">SQL</h5>
-                    <p>Desenvolvimento de consultas eficientes e complexas em SQL para extrair, transformar e
-                        carregar dados (ETL), otimizando bancos de dados para suportar operações de análise e
-                        geração de relatórios.</p>
-                </div>
-                <div class="skill-box bg-secondary text-white">
-                    <img src="assets/img/skills/ETL-WHITE.png" alt="ETL">
-                    <h5 class="curso-tipo">ETL</h5>
-                    <p class="empresa-descricao">Processo envolve coletar dados de várias fontes, transformá-los
-                        conforme as necessidades do
-                        negócio, e carregá-los em um banco de dados ou sistema de armazenamento para análise.</p>
-                </div>
-                <div class="skill-box bg-secondary text-white">
-                    <img src="assets/img/skills/kpi.png" alt="ETL">
-                    <h5 class="curso-tipo">KPI's</h5>
-                    <p class="empresa-descricao">KPIs (Key Performance Indicators), ou Indicadores Chave de
-                        Desempenho, são métricas usadas para avaliar o sucesso de uma organização, projeto ou
-                        processo em atingir objetivos específicos.</p>
-                </div>
+        <!-- RIGHT -->
+        <div class="habilidades-content">
+
+            <!-- HEADER -->
+            <div class="habilidades-header">
+
+                <span class="habilidades-badge">
+                    CORE SKILLS
+                </span>
+
+                <h2>
+                    Principais Habilidades
+                </h2>
+
+                <p>
+                    Soluções analíticas, Business Intelligence,
+                    automações e visualização estratégica de dados.
+                </p>
+
             </div>
-        </div>
-    </section>
 
-    <section id="about" class="section">
-        <div class="container mt-5">
-            <div class="row text-center text-md-left">
-                <div class="col-md-4">
-                    <img src="assets/img/img-profile/memoji-profilev1.png" alt="" class="col-md-10">
-                </div>
-                <div class="pl-md-4 col-md-8">
-                    <div class="container mt-4">
-                        <h6 class="title"></h6>
-                        <div class="row ">
-                            <p class="terminal">
-                                <span id="text"></span><span class="cursor-terminal"></span>
+            <!-- GRID -->
+            <div class="habilidades-grid">
 
-                                <script>
-                                    const text =
-                                        "Apenas um rapaz latino-americano se aventurando no mercado Tech. Apesar do tom descontraído, construí uma trajetória sólida em tecnologia e dados. Sou Analista de Dados em transição, formado em Análise e Desenvolvimento de Sistemas pela Universidade Estácio e com especialização em Data Analytics e Business Intelligence pela Universidade Católica de Brasília. Tenho mais de 5 anos de experiência em Tecnologia, iniciando em Suporte Técnico e, nos últimos anos, focando em Dados, com atuação em ETL, análise exploratória e desenvolvimento de dashboards em Excel, Power BI e SQL. Atualmente, atuo como Analista de Sistemas Jr. – Tasy (Philips) no Home Hospital Ortopédico e Medicina Especializada, atuo com parametrizações de módulos, revisão de processos, criação de relatórios e indicadores em SQL/PL-SQL, treinamentos e integrações de usuários, além de dar suporte a diferentes áreas. Também participo da implantação de novos módulos e melhorias contínuas, adquirindo conhecimento funcional nos processos hospitalares e contribuindo para a eficiência operacional da instituição. Paralelamente, sigo em constante evolução, aprimorando habilidades em Python, SQL, Excel e Power BI, com foco em storytelling de dados e métricas de negócio. Determinado a consolidar minha carreira em Análise de Dados, busco aplicar meu conhecimento para gerar insights estratégicos e impacto positivo nos negócios.";
-                                    let index = 0;
+                <!-- CARD -->
+                <div class="habilidade-card">
 
-                                    function type() {
-                                        if (index < text.length) {
-                                            document.getElementById("text").textContent += text.charAt(index);
-                                            index++;
-                                            setTimeout(type, 100); // Ajuste o intervalo para controlar a velocidade
-                                        }
-                                    }
-
-                                    window.onload = function () {
-                                        type(); // Iniciar a digitação automática quando a página carregar
-                                    };
-                                </script>
-                            </p>
-
-                        </div>
+                    <div class="habilidade-icon">
+                        <i class="fa-solid fa-chart-column"></i>
                     </div>
-                </div>
-            </div>
-        </div>
-        </div>
-    </section>
 
-    <section class="empresas-container" id="projetos" style="background-color: #FF7A57;">
-        <div class="experiencia-topicos">
+                    <span class="habilidade-tag">
+                        DATAVIZ
+                    </span>
 
-            <div class="empresa">
-                <div class="card-imagem">
-                    <div>
-                        <img src="assets/img/img-sites/power-bi-overview.png" alt="">
-                    </div>
-                </div>
-                <div class="card-info">
-                    <h5 class="curso-tipo">Dashboards</h5>
-                    <p class="empresa-descricao">Dashboards desenvolvidos com FIGMA, EXCEL, POWER BI, SQL. Com uso de
-                        funções DAX para medidas matemáticas e métricas.
+                    <h3>
+                        Dashboards & Insights
+                    </h3>
+
+                    <p>
+                        Desenvolvimento de dashboards
+                        interativos com foco em KPIs e storytelling.
                     </p>
-                    <ul class="empresa-habilidades">
-                        <li>EXCEL</li>
+
+                    <ul class="habilidade-stack">
                         <li>POWER BI</li>
-                        <li>FIGMA</li>
                         <li>DAX</li>
+                        <li>FIGMA</li>
                     </ul>
-                    <a href="./dashboards.html" target="_blank" class="">
-                        <i class="fa-solid fa-magnifying-glass"></i></i>
-                        Ver detalhes
-                    </a>
-                </div>
-            </div>
 
-            <div class="empresa">
-                <div class="card-imagem">
-                    <div>
-                        <img src="assets/img/img-sites/Python_(programming_language)-Logo.wine.svg" alt="imagem pandas">
-                        </abbr>
-                    </div>
                 </div>
-                <div class="card-info">
-                    <h5 class="curso-tipo">Python | Projetos</h5>
-                    <p class="empresa-descricao">Analisando Dados, processos de ETL, criação de Dashboards com as bibliotecas: Pandas, Matplotlib e NumPy, utilizando funções, métodos para a exploração dos dados trazidos.
-                    </p>
-                    <ul class="empresa-habilidades">
-                        <li>EXCEL</li>
-                        <li>Python</li>
-                        <li>Pandas</li>
-                        <li>Matplotlib</li>
-                    </ul>
-                    <a href="https://github.com/Fellipe-dotmelo/analiseDados" target="_blank">
-                        <i class="fa-solid fa-magnifying-glass"></i>
-                        Ver detalhes
-                    </a>
-                </div>
-            </div>
 
-            <div class="empresa">
-                <div class="card-imagem">
-                    <div>
-                        <img src="assets/img/img-sites/relacionamento-table.png" alt="" height="230" style="display: block; margin: 0 auto">
+                <!-- CARD -->
+                <div class="habilidade-card">
+
+                    <div class="habilidade-icon">
+                        <i class="fa-solid fa-chart-line"></i>
                     </div>
-                </div>
-                <div class="card-info">
-                    <h5 class="curso-tipo">SQL | Querys e Projetos</h5>
-                    <p class="empresa-descricao">Link que direciona para o GitHub, onde estão localizados alguns
-                        projetos em SQL e consultas em diversas bases de dados. Uso para ETL, analisando dados e
-                        gerando relatórios.
+
+                    <span class="habilidade-tag">
+                        ANALYTICS
+                    </span>
+
+                    <h3>
+                        Análise de Dados
+                    </h3>
+
+                    <p>
+                        Transformação de dados em insights
+                        estratégicos para tomada de decisão.
                     </p>
-                    <ul class="empresa-habilidades">
-                        <li>EXCEL</li>
+
+                    <ul class="habilidade-stack">
                         <li>SQL</li>
+                        <li>POWER BI</li>
+                        <li>KPIs</li>
+                    </ul>
+
+                </div>
+
+                <!-- CARD -->
+                <div class="habilidade-card">
+
+                    <div class="habilidade-icon">
+                        <i class="fa-brands fa-python"></i>
+                    </div>
+
+                    <span class="habilidade-tag">
+                        PYTHON
+                    </span>
+
+                    <h3>
+                        Automações & ETL
+                    </h3>
+
+                    <p>
+                        Processamento, automação e manipulação
+                        de dados utilizando Python.
+                    </p>
+
+                    <ul class="habilidade-stack">
+                        <li>PANDAS</li>
+                        <li>NUMPY</li>
+                        <li>MATPLOTLIB</li>
+                    </ul>
+
+                </div>
+
+                <!-- CARD -->
+                <div class="habilidade-card">
+
+                    <div class="habilidade-icon">
+                        <i class="fa-solid fa-database"></i>
+                    </div>
+
+                    <span class="habilidade-tag">
+                        SQL
+                    </span>
+
+                    <h3>
+                        Queries & Modelagem
+                    </h3>
+
+                    <p>
+                        Desenvolvimento de consultas SQL,
+                        procedures e modelagem de dados.
+                    </p>
+
+                    <ul class="habilidade-stack">
+                        <li>T-SQL</li>
+                        <li>ETL</li>
                         <li>MODELAGEM</li>
                     </ul>
-                    <a href="https://github.com/Fellipe-dotmelo/SQL" target="_blank" class="">
-                        <i class="fa-solid fa-magnifying-glass"></i>
-                        Ver detalhes
+
+                </div>
+
+                <!-- CARD -->
+                <div class="habilidade-card">
+
+                    <div class="habilidade-icon">
+                        <i class="fa-solid fa-gears"></i>
+                    </div>
+
+                    <span class="habilidade-tag">
+                        ETL
+                    </span>
+
+                    <h3>
+                        Integração de Dados
+                    </h3>
+
+                    <p>
+                        Extração, transformação e carga
+                        de dados para análises estratégicas.
+                    </p>
+
+                    <ul class="habilidade-stack">
+                        <li>POWER QUERY</li>
+                        <li>SQL</li>
+                        <li>PIPELINE</li>
+                    </ul>
+
+                </div>
+
+                <!-- CARD -->
+                <div class="habilidade-card">
+
+                    <div class="habilidade-icon">
+                        <i class="fa-solid fa-gauge-high"></i>
+                    </div>
+
+                    <span class="habilidade-tag">
+                        KPIs
+                    </span>
+
+                    <h3>
+                        Indicadores Estratégicos
+                    </h3>
+
+                    <p>
+                        Criação de métricas para acompanhamento
+                        operacional e gerencial.
+                    </p>
+
+                    <ul class="habilidade-stack">
+                        <li>BUSINESS</li>
+                        <li>METRICS</li>
+                        <li>INSIGHTS</li>
+                    </ul>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>        
+  
+    <section id="sobre" class="sobre-section">
+
+    <div class="sobre-container">
+
+        <!-- FOTO -->
+        <div class="sobre-image">
+
+            <img src="assets/img/img-profile/img-profile-black.jpeg" alt="Fellipe Melo">
+
+        </div>
+
+        <!-- TEXTO -->
+        <div class="sobre-content">
+
+            <span class="sobre-badge">
+                SOBRE MIM
+            </span>
+
+            <h3>
+                Transformando dados em decisões estratégicas.
+            </h3>
+
+
+            <p>Apenas um rapaz latino-americano aventurando-se no mercado Tech</p>
+            
+            <p>
+                Sou Analista de Dados com foco em Business Intelligence, SQL, PL/SQL, ETL e desenvolvimento de dashboards estratégicos para apoio à tomada de decisão.
+
+            </p>
+
+            <p>
+                Atuo na construção de soluções analíticas voltadas para indicadores gerenciais, relatórios executivos e visualização de dados, transformando informações operacionais em insights estratégicos para diferentes áreas do negócio.
+            </p>
+
+            <p>
+                Tenho experiência em tecnologia desde suporte técnico até análise exploratória de dados, desenvolvendo consultas SQL, automações, modelagem de indicadores e painéis analíticos utilizando Power BI.
+            </p>
+
+            <p>
+               Atualmente atuo no segmento hospitalar com o ERP Tasy, trabalhando na análise de dados assistenciais e gerenciais, desenvolvimento de dashboards, relatórios estratégicos, indicadores hospitalares e acompanhamento operacional através de soluções orientadas a dados. 
+            </p>
+<br>
+
+        </div>
+
+    </div>
+
+</section>
+
+<section id="projetos" class="projetos-section">
+
+    <div class="projetos-container">
+
+        <!-- LEFT -->
+        <div class="projetos-side">
+
+            <span class="projetos-vertical">
+                PROJETOS
+            </span>
+
+        </div>
+
+        <!-- RIGHT -->
+        <div class="projetos-content">
+
+            <!-- HEADER -->
+            <div class="projetos-header">
+
+                <span class="projetos-badge">
+                    DASHBOARDS • SQL • PYTHON • BI
+                </span>
+
+                <h2>
+                    Projetos & Cases
+                </h2>
+
+                <p>
+                    Projetos desenvolvidos com foco em Business Intelligence,
+                    Data Analytics, automações e visualização estratégica de dados.
+                </p>
+
+            </div>
+
+            <!-- GRID -->
+            <div class="projetos-grid">
+
+                <!-- CARD -->
+                <div class="projeto-card">
+
+                    <div class="projeto-image">
+                        <img src="assets/img/img-sites/dataviz-bi.png" alt="">
+                    </div>
+
+                    <div class="projeto-info">
+
+                        <span class="projeto-tag">
+                            DASHBOARDS
+                        </span>
+
+                        <h3>
+                            Dashboard de Produção
+                        </h3>
+
+                        <p>
+                            KPIs industriais, produtividade,
+                            qualidade e monitoramento operacional.
+                        </p>
+
+                        <ul class="projeto-stack">
+                            <li>POWER BI</li>
+                            <li>EXCEL</li>
+                            <li>DAX</li>
+                        </ul>
+
+                        <a href="https://fellipe-dotmelo.github.io/dashboards.html">
+                            <i class="fa-solid fa-eye"></i>
+                            Visualizar
+                        </a>
+
+                    </div>
+
+                </div>
+
+                <!-- CARD -->
+                <div class="projeto-card">
+
+                    <div class="projeto-image">
+                        <img src="assets/img/img-sites/python-dados.png" alt="">
+                    </div>
+
+                    <div class="projeto-info">
+
+                        <span class="projeto-tag">
+                            PYTHON
+                        </span>
+
+                        <h3>
+                            Python para Dados
+                        </h3>
+
+                        <p>
+                            ETL, tratamento de dados,
+                            automações e dashboards analíticos.
+                        </p>
+
+                        <ul class="projeto-stack">
+                            <li>PYTHON</li>
+                            <li>PANDAS</li>
+                            <li>NUMPY</li>
+                        </ul>
+
+                        <a href="https://github.com/Fellipe-dotmelo/analiseDados">
+                            <i class="fa-solid fa-eye"></i>
+                            Visualizar
+                        </a>
+
+                    </div>
+
+                </div>
+
+                <!-- CARD -->
+                <div class="projeto-card">
+
+                    <div class="projeto-image">
+                        <img src="assets/img/img-sites/sql-reports.png" alt="">
+                    </div>
+
+                    <div class="projeto-info">
+
+                        <span class="projeto-tag">
+                            RELATÓRIOS
+                        </span>
+
+                        <h3>
+                            SQL Reports
+                        </h3>
+
+                        <p>
+                            Relatórios gerenciais,
+                            métricas e análises estratégicas.
+                        </p>
+
+                        <ul class="projeto-stack">
+                            <li>SQL</li>
+                            <li>REPORTS</li>
+                            <li>BI</li>
+                        </ul>
+
+                        <a href="https://github.com/Fellipe-dotmelo/SQL">
+                            <i class="fa-solid fa-eye"></i>
+                            Visualizar
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+    <section id="formacao" class="formacao-section">
+
+    <div class="formacao-container">
+
+        <!-- TITLE -->
+        <div class="formacao-side">
+
+            <span class="formacao-vertical">
+                FORMAÇÃO
+            </span>
+
+        </div>
+
+        <!-- CONTENT -->
+        <div class="formacao-content">
+
+            <!-- DEGREES -->
+            <div class="formacao-grid">
+
+                <!-- CARD -->
+                <div class="formacao-card">
+
+                    <span class="formacao-tag">
+                        FORMAÇÃO
+                    </span>
+
+                    <h3>
+                        Data Analytics
+                    </h3>
+
+                    <p>
+                        YTO NIHON
+                    </p>
+
+                </div>
+
+                <div class="formacao-card">
+
+                    <span class="formacao-tag">
+                        FORMAÇÃO
+                    </span>
+
+                    <h3>
+                        Análise de Dados e BI
+                    </h3>
+
+                    <p>
+                        HASHTAG PROGRAMAÇÃO
+                    </p>
+
+                </div>
+
+                <div class="formacao-card">
+
+                    <span class="formacao-tag">
+                        IDIOMAS
+                    </span>
+
+                    <h3>
+                        Inglês
+                    </h3>
+
+                    <p>
+                        CILT - TAGUATINGA
+                    </p>
+
+                </div>
+
+                <div class="formacao-card">
+
+                    <span class="formacao-tag">
+                        ESPECIALIZAÇÃO
+                    </span>
+
+                    <h3>
+                        Big Data & BI
+                    </h3>
+
+                    <p>
+                        UNIVERSIDADE CATÓLICA DE BRASÍLIA
+                    </p>
+
+                </div>
+
+                <div class="formacao-card">
+
+                    <span class="formacao-tag">
+                        TECNÓLOGO
+                    </span>
+
+                    <h3>
+                        Análise e Des. de Sistemas
+                    </h3>
+
+                    <p>
+                        UNIVERSIDADE ESTÁCIO DE SÁ
+                    </p>
+
+                </div>
+
+                <div class="formacao-card">
+
+                    <span class="formacao-tag">
+                        TÉCNICO
+                    </span>
+
+                    <h3>
+                        Técnico em Informática
+                    </h3>
+
+                    <p>
+                        ESCOLA TÉCNICA DE CEILÂNDIA
+                    </p>
+
+                </div>
+
+            </div>
+
+            <!-- COURSES -->
+            <div class="courses-section">
+
+                <div class="courses-title">
+
+                    <i class="fa-solid fa-book-open"></i>
+
+                    <span>
+                        CURSOS & CERTIFICAÇÕES
+                    </span>
+
+                </div>
+
+                <div class="courses-grid">
+
+                    <!-- ITEM -->
+                    <div class="course-item">
+
+                        <div>
+                            <strong>SQL Server & Power BI</strong>
+                            <span>UDEMY</span>
+                        </div>
+
+                        <small>36h</small>
+
+                    </div>
+
+                    <div class="course-item">
+
+                        <div>
+                            <strong>Power BI do Básico ao Avançado</strong>
+                            <span>UDEMY</span>
+                        </div>
+
+                        <small>11h</small>
+
+                    </div>
+
+                    <div class="course-item">
+
+                        <div>
+                            <strong>Python para Data Analytics</strong>
+                            <span>YTO NIHON</span>
+                        </div>
+
+                        <small>36h</small>
+
+                    </div>
+
+                    <div class="course-item">
+
+                        <div>
+                            <strong>SQL Server para Data Analytics</strong>
+                            <span>YTO NIHON</span>
+                        </div>
+
+                        <small>33h</small>
+
+                    </div>
+
+                    <div class="course-item">
+
+                        <div>
+                            <strong>Excel Analytics</strong>
+                            <span>INFINITY BIG DATA</span>
+                        </div>
+
+                        <small>36h</small>
+
+                    </div>
+
+                    <div class="course-item">
+
+                        <div>
+                            <strong>UX/UI Design com Figma</strong>
+                            <span>ORIGAMID</span>
+                        </div>
+
+                        <small>17h</small>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+    <section id="contato" class="contact-section">
+
+    <div class="contact-overlay"></div>
+
+    <div class="container">
+        <div class="contact-wrapper">
+            <!-- LEFT -->
+            <div class="contact-content">
+                <span class="contact-badge">
+                    DISPONÍVEL PARA PROJETOS
+                </span>
+                <h2>
+                    Vamos conversar?
+                </h2>
+                <p>
+                    Entre em contato comigo através das plataformas abaixo.
+                    Estou disponível para projetos de dashboards,
+                    análise de dados, automações e Business Intelligence.
+                </p>
+                <div class="contact-cards">
+                    <!-- Whats -->
+                    <a href="https://api.whatsapp.com/send?phone=5561985612400"
+                       target="_blank"
+                       class="contact-card">
+
+                        <i class="fa-brands fa-whatsapp"></i>
+
+                        <div>
+                            <strong>WhatsApp</strong>
+                            <span>Contato rápido</span>
+                        </div>
+
+                    </a>
+
+                    <!-- Email -->
+                    <a href="mailto:fellipe.scontato@gmail.com"
+                       class="contact-card">
+
+                        <i class="fa-solid fa-envelope"></i>
+
+                        <div>
+                            <strong>E-mail</strong>
+                            <span>fellipe.scontato@gmail.com</span>
+                        </div>
+
+                    </a>
+
+                    <!-- LinkedIn -->
+                    <a href="https://linkedin.com"
+                       target="_blank"
+                       class="contact-card">
+
+                        <i class="fa-brands fa-linkedin"></i>
+
+                        <div>
+                            <strong>LinkedIn</strong>
+                            <span>Networking profissional</span>
+                        </div>
+
+                    </a>
+
+                    <!-- GitHub -->
+                    <a href="https://github.com"
+                       target="_blank"
+                       class="contact-card">
+
+                        <i class="fa-brands fa-github"></i>
+
+                        <div>
+                            <strong>GitHub</strong>
+                            <span>Projetos e códigos</span>
+                        </div>
                     </a>
                 </div>
             </div>
-
-        </div>
-    </section>
-
-    <section id="animacao" >
-        <div class="container-bouncing-balls" id="formacao">
-            <div class="ball"></div>
-            <div class="ball"></div>
-            <div class="ball"></div>
-        </div>
-    </section>
-
-    <section class="formacao" aria-label="Formação">
-        <div class="formacao-container">
-            <h2 class="subtitulo-formacao">F<br>o<br>r<br>m<br>a<br>ç<br>ã<br>o</h2>
-            <div>
-                <ul class="curso-lista">
-                    <li class="curso">
-                        <span class="curso-tipo">Formação</span>
-                        <h3 class="curso-qual">Data Analytics</h3>
-                        <span class="curso-instituicao">Yto Nihon</span>
-                        <div class="progress">
-                            <div class="progress-bar bg-primary" role="progressbar" style="width: 15%;" aria-valuenow="70" aria-valuemin="0" aria-valuemax="1">
-                                <span class="completion-percentage">15%</span>
-                            </div>
-                        </div>
-                    </li>
-                    <li class="curso">
-                        <span class="curso-tipo">Formação</span>
-                        <h3 class="curso-qual">Análise de Dados e BI</h3>
-                        <span class="curso-instituicao">Hashtag Programação</span>
-                        <div class="progress">
-                            <div class="progress-bar bg-primary" role="progressbar" style="width: 10%;" aria-valuenow="70" aria-valuemin="0" aria-valuemax="10">
-                                <span class="completion-percentage">10%</span>
-                            </div>
-                        </div>
-                    </li>
-                    <li class="curso">
-                        <span class="curso-tipo">Estudo Línguas</span>
-                        <h3 class="curso-qual">Inglês</h3>
-                        <span class="curso-instituicao">CILT - Taguatinga</span>
-                        <div class="progress">
-                            <div class="progress-bar bg-primary" role="progressbar" style="width: 33%;" aria-valuenow="70" aria-valuemin="0" aria-valuemax="33">
-                                <span class="completion-percentage">33%</span>
-                            </div>
-                        </div>
-                    </li>
-                    <li class="curso">
-                        <span class="curso-tipo">Especialização</span>
-                        <h3 class="curso-qual">Análise de Dados e BI</h3>
-                        <span class="curso-instituicao">UNIVERSIDADE CATÓLICA DE BRASÍLIA</span>
-                        <div class="progress">
-                            <div class="progress-bar bg-primary" role="progressbar" style="width: 100%;"
-                                aria-valuenow="60" aria-valuemin="0" aria-valuemax="100"><span></span></div>
-                        </div>
-                    </li>
-                    <li class="curso">
-                        <span class="curso-tipo">Tecnólogo</span>
-                        <h3 class="curso-qual">Análise e Desenvolvimento de Sistemas</h3>
-                        <span class="curso-instituicao">UNIVERSIDADE ESTÁCIO DE SÁ</span>
-                        <div class="progress">
-                            <div class="progress-bar bg-primary" role="progressbar" style="width: 100%;"
-                                aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"><span></span></div>
-                        </div>
-                    </li>
-                    <li class="curso">
-                        <span class="curso-tipo">Técnico</span>
-                        <h3 class="curso-qual">Técnico em Informática</h3>
-                        <span class="curso-instituicao">ESCOLA TÉCNICA DE CEILÂNDIA</span>
-                        <div class="progress">
-                            <div class="progress-bar bg-primary" role="progressbar" style="width: 100%;"
-                                aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"><span></span></div>
-                        </div>
-                    </li>
-                </ul>
-
-                <div class="formacao-extra">
-                    <div class="cursos">
-                        <h3>Cursos Intensivos</h3>
-                        <ul>
-                            <span class="curso-instituicao">IFRS</span>
-                            <li>Administrador de Banco de Dados<span>200 horas</span></li>
-                            <span class="curso-instituicao">Origamid</span>
-                            <li>UX Design & UI Design com Figma<span>17 horas</span></li>
-                            <span class="curso-instituicao">Origamid</span>
-                            <li>Front End para Iniciantes <span>26 horas</span></li>
-                            <span class="curso-instituicao">Udemy</span>
-                            <li>Desenvolvimento Web Completo <span>114 horas</span></li>
-                            <span class="curso-instituicao">Udemy</span>
-                            <li>SQL Server & Power BI<span> 36 horas</span></li>
-                            <span class="curso-instituicao">Udemy</span>
-                            <li>Análise de Dados com Pandas e Python <span> 07 horas</span></li>
-                            <span class="curso-instituicao">Udemy</span>
-                            <li>Banco de Dados e SQL <span> 20 horas</span></li>
-                            <span class="curso-instituicao">Udemy</span>
-                            <li>Power BI do Básico ao Avançado <span> 11 horas</span></li>
-                            <span class="curso-instituicao">Infinity Big Data</span>
-                            <li>Excel Analytics<span>36 horas</span></li>
-                            <span class="curso-instituicao">Yto Nihon</span>
-                            <li>Fundamentos de Dataviz<span>09 horas</span></li>
-                            <span class="curso-instituicao">Yto Nihon</span>
-                            <li>Data Literacy<span>06 horas</span></li>
-                            <span class="curso-instituicao">Yto Nihon</span>
-                            <li>Power BI For Data Analytics<span>36 horas</span></li>
-                            <span class="curso-instituicao">Yto Nihon</span>
-                            <li>Figma Para Data Analitycs<span>12 horas</span></li>
-                            <span class="curso-instituicao">Yto Nihon</span>
-                            <li>SQL Server Para Data Analitycs<span>33 horas</span></li>
-                            <span class="curso-instituicao">Yto Nihon</span>
-                            <li>Python Para Data Analitycs<span>33 horas</span></li>
-                            <span class="curso-instituicao">Hashtag Treinamentos</span>
-                            <li>Power BI<span>em andamento</span></li>
-                            <span class="curso-instituicao">Hashtag Treinamentos</span>
-                            <li>Python<span>em andamento</span></li>
-                        </ul>
-                    </div>
-                    <div class="cursos idiomas">
-                        <h3>Idiomas</h3>
-                        <ul>
-                            <li>Inglês<span> / Intermediário</span></li>
-                        </ul>
-                    </div>
-                </div>
+            <!-- RIGHT -->
+            <div class="contact-map">
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d169254.55532343482!2d-47.924970875738005!3d-15.715218602297746!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x935a3d18df9ae275%3A0x738470e469754a24!2zQnJhc8OtbGlhLCBERg!5e0!3m2!1spt-BR!2sbr!4v1713541885597!5m2!1spt-BR!2sbr"
+                    allowfullscreen=""
+                    loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade">
+                </iframe>
             </div>
         </div>
-        </div>
-    </section>
-
-    <section id="animacao">
-        <div class="container-bouncing-balls">
-            <div class="ball"></div>
-            <div class="ball"></div>
-            <div class="ball"></div>
-        </div>
-    </section>
-
-
-    <section id="contato" class="position-relative section">
-        <div class="container text-center">
-            <div class="contact text-left">
-                <div class="form">
-                    <h6 class="section-title mb-3" style="color: #FFF;">Insira seu contato</h6>
-                    <form action="https://formspree.io/f/xvoewdod" method="POST">
-                        <div class="form-group">
-                            <input type="email" class="form-control" id="exampleInputEmail1"
-                                aria-describedby="emailHelp" placeholder="Insira seu e-mail" required>
-                        </div>
-                        <div class="form-group">
-                            <textarea name="contact-message" id="" cols="30" rows="5" class="form-control"
-                                placeholder="Insira uma mensagem"></textarea>
-                        </div>
-                        <button type="submit" class="btn btn-primary btn-block rounded w-lg" target="_blank">ENVIAR</button>
-                    </form>
-                </div>
-                <div class="contact-infos">
-                    <div class="item">
-                        <i class="fa-brands fa-square-whatsapp"></i>
-                        <div>
-                            <h5 class="curso-tipo">WhatsApp</h5>
-                            <a href="https://api.whatsapp.com/send?phone=5561985612400" target="_blank class="social-item">Contato</a>
-                        </div>
-                    </div>
-                    <div class="item">
-                        <i class="fa-solid fa-envelope"></i>
-                        <div class="mb-0">
-                            <h5 class="curso-tipo">E-mail</h5>
-                            <p class="social-item" style="color: #FF7A57;">fellipe.scontato@gmail.com</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        </div>
-        <div id="map">
-            <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d169254.55532343482!2d-47.924970875738005!3d-15.715218602297746!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x935a3d18df9ae275%3A0x738470e469754a24!2zQnJhc8OtbGlhLCBERg!5e0!3m2!1spt-BR!2sbr!4v1713541885597!5m2!1spt-BR!2sbr"
-                allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-        </div>
-    </section>
+    </div>
+</section>
 
     <section>
         <footer class="page-footer">
             <div class="container">
                 <div class="row align-items-center">
                     <p>Esta página está em constante atualização. Alguns direitos são reservados - Fellipe Melo
-                        <script>
-                            document.write(new Date().getFullYear())
-                        </script> &copy; </p>
-                    <div id="cookie-banner"
-                        style="position: fixed; bottom: 0; background: #333; color: #fff; padding: 10px; width: 100%; display: none;">
-                        <p>Este site usa cookies para melhorar a experiência. <a href="/privacy-policy">Saiba
-                                mais</a>. <button id="accept-cookies">Aceitar</button></p>
-                    </div>
-
-                    <script>
-                        document.getElementById('accept-cookies').addEventListener('click', function () {
-                            document.getElementById('cookie-banner').style.display = 'none';
-                            document.cookie = "cookieConsent=true; SameSite=Lax";
-                        });
-
-                        if (document.cookie.indexOf('cookieConsent=true') === -1) {
-                            document.getElementById('cookie-banner').style.display = 'block';
-                        }
-                    </script>
                 </div>
             </div>
         </footer>

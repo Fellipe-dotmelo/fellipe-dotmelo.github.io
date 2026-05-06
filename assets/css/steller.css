@@ -594,169 +594,204 @@ pre code {
 /* ===============================
    ANIMAÇÃO – FERRAMENTAS (TICKER)
 =============================== */
+/* =========================================
+   HERO STACKS TICKER
+========================================= */
+
 #transition-ferramentas {
   width: 100%;
-  max-width: 100vw;
-  margin: 40px auto 0; /* 🔧 adiciona espaçamento natural abaixo do header */
-  padding: 15px 0;
-  display: flex;
-  justify-content: center;
+
+  margin-top: 70px;
+
+  position: relative;
+
+  overflow: hidden;
 }
 
-#transition-ferramentas *,
-#transition-ferramentas *::before,
-#transition-ferramentas *::after {
-  box-sizing: border-box;
-}
+/* remove aparência de caixa */
 
 #transition-ferramentas .card {
-  width: min(1100px, 96vw);
-  margin: 0 auto;
+  width: 100%;
+
   background: transparent;
+
   border: none;
+
+  box-shadow: none;
+
   overflow: hidden;
-  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
 }
 
-/* ===== Ticker ===== */
+/* ticker */
+
 #transition-ferramentas .ticker {
   position: relative;
+
   overflow: hidden;
-  height: 72px;
-  --gap: 36px;
-  --speed: 22s;
-  mask-image: linear-gradient(90deg, transparent 0, #000 8%, #000 92%, transparent 100%);
+
+  height: 64px;
+
+  --gap: 18px;
+
+  --speed: 34s;
+
+  mask-image:
+    linear-gradient(
+      90deg,
+      transparent 0%,
+      #000 8%,
+      #000 92%,
+      transparent 100%
+    );
 }
+
+/* track */
 
 #transition-ferramentas .track {
-  position: absolute;
-  white-space: nowrap;
-  will-change: transform;
   display: inline-flex;
+
   align-items: center;
+
   gap: var(--gap);
-  padding-left: 16px;
-  animation: tf-scroll var(--speed) linear infinite;
+
+  white-space: nowrap;
+
+  will-change: transform;
+
+  animation:
+    tf-scroll var(--speed) linear infinite;
 }
+
+/* animation */
 
 @keyframes tf-scroll {
-  from { transform: translateX(0); }
-  to { transform: translateX(-100%); }
+
+  from {
+    transform: translateX(0);
+  }
+
+  to {
+    transform: translateX(-50%);
+  }
 }
 
-/* ===== Item ===== */
+/* =========================================
+   ITEM
+========================================= */
+
 #transition-ferramentas .tool {
   display: inline-flex;
+
   align-items: center;
-  gap: 12px;
+
+  gap: 10px;
+
   padding: 10px 16px;
-  border-radius: 12px;
-  background: #191514;
-  border: 1px solid rgba(255,255,255,0.08);
-  color: #fff;
-  font-size: 15px;
-  font-weight: 700;
-  letter-spacing: .02em;
-  white-space: nowrap;
+
+  border-radius: 999px;
+
+  background:
+    rgba(20,20,20,.92);
+
+  border:
+    1px solid rgba(255,255,255,.04);
+
+  color: rgba(255,255,255,.92);
+
+  font-size: 13px;
+
+  font-weight: 600;
+
+  letter-spacing: .3px;
+
+  backdrop-filter: blur(10px);
+
+  transition:
+    transform .25s ease,
+    border-color .25s ease,
+    background .25s ease;
 }
+
+/* hover */
+
+#transition-ferramentas .tool:hover {
+  transform: translateY(-2px);
+
+  border-color:
+    rgba(255,122,87,.24);
+
+  background:
+    rgba(28,28,28,.96);
+}
+
+/* icon */
 
 #transition-ferramentas .tool img {
-  width: 26px;
-  height: 26px;
+  width: 18px;
+  height: 18px;
+
   object-fit: contain;
-  flex: 0 0 auto;
+
+  opacity: .92;
 }
 
-#transition-ferramentas .tool.no-img {
-  padding-left: 14px;
-}
+/* brilho suave */
 
-/* Brilho decorativo */
 #transition-ferramentas .ticker::after {
   content: "";
+
   position: absolute;
+
   inset: 0;
-  background: linear-gradient(90deg, transparent, rgba(255,255,255,.06), transparent);
-  transform: translateX(-100%);
-  animation: tf-sheen 6s linear infinite;
+
+  background:
+    linear-gradient(
+      90deg,
+      transparent,
+      rgba(255,255,255,.03),
+      transparent
+    );
+
+  animation:
+    tf-sheen 8s linear infinite;
+
   pointer-events: none;
 }
 
 @keyframes tf-sheen {
-  to { transform: translateX(100%); }
-}
 
-/* ===============================
-   RESPONSIVIDADE
-=============================== */
-@media (max-width: 1200px) {
-  #transition-ferramentas {
-    margin-top: 30px;
+  from {
+    transform: translateX(-100%);
   }
-  #transition-ferramentas .tool {
-    font-size: 14px;
-    padding: 8px 12px;
-    gap: 10px;
-  }
-  #transition-ferramentas .tool img {
-    width: 24px;
-    height: 24px;
+
+  to {
+    transform: translateX(100%);
   }
 }
 
-@media (max-width: 992px) {
+/* =========================================
+   RESPONSIVO
+========================================= */
+
+@media (max-width: 768px) {
+
   #transition-ferramentas {
     margin-top: 50px;
   }
-  #transition-ferramentas .ticker {
-    height: 64px;
-    --gap: 30px;
-  }
-}
 
-@media (max-width: 768px) {
-  #transition-ferramentas {
-    margin-top: 40px;
-  }
   #transition-ferramentas .ticker {
-    height: 60px;
-    --gap: 28px;
+    height: 58px;
   }
-  #transition-ferramentas .tool {
-    font-size: 13px;
-    padding: 7px 10px;
-  }
-  #transition-ferramentas .tool img {
-    width: 22px;
-    height: 22px;
-  }
-}
 
-@media (max-width: 520px) {
-  #transition-ferramentas {
-    margin-top: 30px;
-  }
-  #transition-ferramentas .ticker {
-    height: 54px;
-    --gap: 22px;
-  }
   #transition-ferramentas .tool {
+    padding: 8px 14px;
+
     font-size: 12px;
-    padding: 6px 8px;
   }
-  #transition-ferramentas .tool img {
-    width: 20px;
-    height: 20px;
-  }
-}
 
-/* Acessibilidade */
-@media (prefers-reduced-motion: reduce) {
-  #transition-ferramentas .track {
-    animation-duration: 0.001s;
-  }
-  #transition-ferramentas .ticker::after {
-    display: none;
+  #transition-ferramentas .tool img {
+    width: 16px;
+    height: 16px;
   }
 }
 
@@ -782,6 +817,17 @@ header .container {
   display: grid;
   grid-template-columns: 1fr 2fr;
   gap: 40px;
+}
+
+.cards-grid {
+  display: grid;
+
+  grid-template-columns:
+    repeat(auto-fit, minmax(280px, 1fr));
+
+  gap: 24px;
+
+  width: 100%;
 }
 
 .terminal {
@@ -814,23 +860,29 @@ header .container {
 /*Experiência - Empresas*/
 .experiencia-topicos {
   display: grid;
-  grid-template-columns: repeat(3, 2fr);
-  /* Cada par de itens ocupa duas colunas */
-  gap: 7px;
-  /* Espaçamento entre os pares de itens */
+
+  grid-template-columns:
+    repeat(auto-fit, minmax(280px, 1fr));
+
+  gap: 16px;
+
   max-width: 1300px;
-  padding: 100px 50px;
+
   margin: 0 auto;
+
+  padding: 40px 24px;
+
+  align-items: stretch;
 }
 
 .empresa {
+  width: 100%;
+
+  height: 100%;
+
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
-  height: 100%;
-  padding: 5px;
-  background-color: #2e2e2e;
-  border-radius: 10px;
+  border: 4px solid rgba(0, 0, 0, 1);
 }
 
 .card-imagem {
@@ -851,17 +903,27 @@ header .container {
 }
 
 .card-info {
-  border-radius: 0 0 5px 5px;
-  padding: 15px;
-  background: linear-gradient(0deg, rgba(14, 14, 14, 0.8), rgba(14, 14, 14, 0.8)), linear-gradient(0deg, #2e2e2e, #2e2e2e);
-  opacity: 0.95;
-  min-width: 370px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+
+  width: 100%;
+
+  min-width: unset;
+
   height: 100%;
-  box-sizing: border-box;
-  color: #fff;
+
+  padding: 20px;
+}
+
+.card-imagem img {
+  width: 100%;
+
+  height: 220px;
+
+  object-fit: cover;
+
+  display: block;
 }
 
 .card-info p {
@@ -1238,16 +1300,9 @@ header .container {
     max-height: 100%;
   }
 
-  .experiencia-topicos {
-    display: grid;
-    grid-template-columns: 1fr;
-    /* Cada par de itens ocupa duas colunas */
-    gap: 10px;
-    /* Espaçamento entre os pares de itens */
-    max-width: 1300px;
-    padding: 100px 16px;
-    margin: 0 auto;
-  }
+.experiencia-topicos {
+  grid-template-columns: repeat(2, 1fr);
+}
 
   .formacao-texto {
     font-size: 1.25rem;
@@ -13698,4 +13753,336 @@ i {
   .timeline-item.left:before, .timeline-item.right:before {
       left: -20px;
   }
+}
+
+
+
+/* =========================================
+   HERO FIX | REMOVER ESPAÇO MORTO
+========================================= */
+
+.header {
+  padding-top: 120px !important;
+  padding-bottom: 0 !important;
+
+  height: auto !important;
+  min-height: unset !important;
+}
+
+.header .container {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: space-between !important;
+
+  gap: 40px !important;
+
+  flex-wrap: wrap !important;
+}
+
+.header .img-holder img {
+  width: 100% !important;
+  max-width: 420px !important;
+
+  height: auto !important;
+}
+
+#transition-ferramentas {
+  margin-top: 100px !important;
+  margin-bottom: 0px !important;
+}
+
+/* RESPONSIVO */
+
+@media (max-width: 992px) {
+
+  .header {
+    padding-top: 110px !important;
+  }
+
+  #transition-ferramentas {
+    margin-top: -30px !important;
+  }
+
+  .header .img-holder img {
+    max-width: 340px !important;
+  }
+}
+
+@media (max-width: 768px) {
+
+  .header {
+    padding-top: 100px !important;
+  }
+
+  #transition-ferramentas {
+    margin-top: 0 !important;
+  }
+
+  .header .img-holder img {
+    max-width: 260px !important;
+  }
+}
+
+
+/* =========================================
+   AJUSTES FINAIS RESPONSIVOS
+========================================= */
+
+/* HERO */
+.header {
+  padding-top: 120px !important;
+  padding-bottom: 20px !important;
+  min-height: unset !important;
+  height: auto !important;
+}
+
+.header .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+
+.header .img-holder img,
+.header img.img-thumbnail {
+  width: 100%;
+  max-width: 420px;
+  height: auto;
+}
+
+/* STACKS */
+#transition-ferramentas {
+  margin-top: -50px !important;
+  margin-bottom: 10px !important;
+  position: relative;
+  z-index: 2;
+}
+
+/* DASHBOARDS */
+.experiencia-topicos {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+  max-width: 1300px;
+  padding: 40px 24px;
+  margin: 0 auto;
+}
+
+/* PROJETOS */
+.cards-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 24px;
+  width: 100%;
+}
+
+.cards-grid .empresa,
+.experiencia-topicos .empresa {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.cards-grid .card-info,
+.experiencia-topicos .card-info {
+  flex: 1;
+}
+
+.cards-grid .card-imagem img,
+.experiencia-topicos .card-imagem img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  display: block;
+}
+
+/* RESPONSIVO */
+@media (max-width: 1200px) {
+
+  .experiencia-topicos {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 992px) {
+
+  .header {
+    padding-top: 100px !important;
+  }
+
+  #transition-ferramentas {
+    margin-top: 0 !important;
+  }
+
+  .header .img-holder img,
+  .header img.img-thumbnail {
+    max-width: 320px;
+  }
+}
+
+@media (max-width: 768px) {
+
+  .experiencia,
+  .formacao-container {
+    grid-template-columns: 1fr;
+  }
+
+  .experiencia-topicos,
+  .cards-grid {
+    grid-template-columns: 1fr;
+    padding: 20px;
+  }
+
+  header .container {
+    padding: 0 20px;
+  }
+
+  .header {
+    padding-top: 90px !important;
+  }
+
+  .header .img-holder img,
+  .header img.img-thumbnail {
+    max-width: 240px;
+  }
+
+  #transition-ferramentas {
+    margin-top: 10px !important;
+  }
+}
+
+
+
+
+/* =========================================
+   RESTAURAÇÃO VISUAL DOS CARDS
+========================================= */
+
+.empresa {
+  background:
+    linear-gradient(
+      0deg,
+      rgba(14, 14, 14, 0.92),
+      rgba(14, 14, 14, 0.92)
+    ) !important;
+
+  border-radius: 14px;
+
+  overflow: hidden;
+
+  display: flex;
+  flex-direction: column;
+
+  height: 100%;
+}
+
+.card-info {
+  background: transparent !important;
+
+  padding: 20px;
+
+  display: flex;
+  flex-direction: column;
+
+  flex: 1;
+}
+
+.card-imagem {
+  background: #fff;
+
+  overflow: hidden;
+}
+
+.card-imagem img {
+  width: 100%;
+
+  height: 220px;
+
+  object-fit: cover;
+
+  display: block;
+}
+
+.card-info a {
+  margin-top: auto;
+}
+
+.empresa-habilidades {
+  margin-top: auto;
+  margin-bottom: 10px;
+}
+
+
+
+
+/* =========================================
+   BORDA PREMIUM DOS CARDS
+========================================= */
+
+.empresa {
+  border: 2px solid rgba(0, 0, 0, 0.75);
+
+  box-shadow:
+    0 4px 12px rgba(0,0,0,.18),
+    0 0 0 1px rgba(255,255,255,.04) inset;
+
+  transition:
+    transform .25s ease,
+    box-shadow .25s ease,
+    border-color .25s ease;
+}
+
+.empresa:hover {
+  transform: translateY(-4px);
+
+  border-color: rgba(255,255,255,.15);
+
+  box-shadow:
+    0 12px 28px rgba(0,0,0,.28),
+    0 0 0 1px rgba(255,255,255,.06) inset;
+}
+
+.card-imagem img {
+  border-bottom:
+    1px solid rgba(255,255,255,.06);
+}
+
+/* =========================================
+   ICON REFINEMENT
+========================================= */
+
+i[class^="fa-"],
+i[class*=" fa-"] {
+  line-height: 1;
+
+  vertical-align: middle;
+}
+
+/* botões */
+
+.hero-btn i,
+.projeto-info a i,
+.contact-card i {
+  font-size: 15px;
+}
+
+/* social */
+
+.hero-social i,
+.social-item i {
+  font-size: 18px;
+}
+
+/* cards habilidades */
+
+.habilidade-icon i {
+  font-size: 24px;
+}
+
+/* títulos / mini icons */
+
+.courses-title i,
+.contact-badge i {
+  font-size: 14px;
 }

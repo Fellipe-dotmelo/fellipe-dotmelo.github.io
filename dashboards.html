@@ -1,504 +1,753 @@
+```html
 <!DOCTYPE html>
 <html lang="pt-br">
 
 <head>
-  <meta charset="UTF-8">
-  <link rel="icon" href="assets/img/img-favicon/favicon.svg" type="image/svg+xml">
 
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="assets/vendors/themify-icons/css/themify-icons.css">
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-  <!-- Bootstrap JS, jQuery e Popper.js -->
-  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
-  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <link rel="stylesheet" href="assets/vendors/themify-icons/css/themify-icons.css">
-  <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;700&display=swap" rel="stylesheet">
+    <title>Dashboards | Fellipe Melo</title>
 
-  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <!-- CSS -->
+    <link rel="stylesheet" href="assets/vendors/themify-icons/css/themify-icons.css">
+    <link rel="stylesheet" href="assets/css/steller.css">
+    <link rel="stylesheet" href="assets/css/navbar.css">
+    <link rel="stylesheet" href="assets/css/dashboards.css">
+    <link rel="stylesheet" href="assets/css/contato2.css">
 
-  <script src="https://kit.fontawesome.com/24defec40b.js" crossorigin="anonymous"></script>
-  <!-- Bootstrap + Steller main styles -->
-  <link rel="stylesheet" href="assets/css/steller.css">
-  <title>Dashboards</title>
+    <!-- Font Awesome -->
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
+
 </head>
 
-<nav class="navbar navbar-expand-lg fixed-top logo" data-spy="affix" data-offset-top="0"
-  style="background: linear-gradient(0deg, rgba(14, 14, 14, 0.8), rgba(14, 14, 14, 0.8)), linear-gradient(0deg, #2e2e2e, #2e2e2e); opacity: 0.95;">
-  <div class="container">
-    <img class="header-img" src="assets/img/img-icons/logo.png" alt="Logo">
-
-    <!-- Botão de Navegação Mobile -->
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
-      aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-      <ul class="navbar-nav ml-auto align-items-center">
-        <li class="nav-item">
-          <a class="nav-link" href="index.html">Home</a>
-        </li>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#contato">Contato</a>
-        </li>
-      </ul>
-    </div>
-    <div class="logo">
-      <a href="#"></a>
-    </div>
-  </div>
-</nav>
-
-<script>
-  $(document).ready(function () {
-    // Alternar o menu ao clicar no botão navbar-toggler
-    $('.navbar-toggler').on('click', function () {
-      $('#navbarSupportedContent').collapse('toggle');
-    });
-
-    // Fechar o menu quando clicar em um link do menu
-    $('.navbar-nav>li>a').on('click', function () {
-      $('#navbarSupportedContent').collapse('hide');
-    });
-  });
-</script>
-
 <body>
-  <section class="empresas-container" id="experiencia" style="background-color: #FF7A57;">
-    <div class="experiencia-topicos">
-      <div class="empresa">
-        <div class="card-imagem">
-          <div class="iframe-container">
-            <img src="assets/img/img-dashboards/001-dashboard-producao/producao-ds.png" frameborder="0"
-              allowFullScreen="true"></img>
-          </div>
+
+    <!-- =========================================
+         NAVBAR
+    ========================================== -->
+
+    <nav class="custom-navbar">
+
+        <div class="container">
+
+            <!-- LOGO -->
+            <a href="index.html" class="logo">
+
+                <img src="assets/img/logo.png" alt="FM Dados">
+
+            </a>
+
+            <!-- MENU -->
+            <ul class="nav" id="navMenu">
+
+                <li>
+                    <a href="index.html#home" class="nav-link">
+                        Home
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#contato" class="nav-link">
+                        Contato
+                    </a>
+                </li>
+
+            </ul>
+
+            <!-- MOBILE -->
+            <button class="navbar-toggler" id="menuToggle">
+
+                <i class="fa-solid fa-bars"></i>
+
+            </button>
+
         </div>
-        <div class="card-info">
-          <h5 class="curso-tipo">Dashboard | Produção</h5>
-          <p class="empresa-descricao">Este painel acompanha a eficiência da produção industrial, monitorando a produtividade, qualidade e ritmo de trabalho ao longo dos meses. Ele fornece insights sobre o desempenho operacional e ajuda a identificar oportunidades de melhoria.
-          </p>
 
-          <h5 class="curso-tipo">Insights Extraídos</h5>
-            <ul class="insights-lista">
-              <li><i class="fa fa-check" aria-hidden="true"></i>Volume de peças produzidas mensalmente</li>
-              <li><i class="fa fa-check" aria-hidden="true"></i>Nível de qualidade das peças produzidas</li>
-              <li><i class="fa fa-check" aria-hidden="true"></i>Taxa de produtividade e qualidade</li>
-          </ul>
+    </nav>
 
-          <ul class="empresa-habilidades">
-            <li>EXCEL</li>
-            <li>POWER BI</li>
-            <li>DAX</li>
-          </ul>
-          <a href="https://app.powerbi.com/view?r=eyJrIjoiYmJjN2JkMzUtYTAxNS00NDNiLWI5MzMtMTIxMzY1MGRiZTRkIiwidCI6IjQ3M2RhZThlLTg2M2MtNDE2NS1hMGE2LTk0MTA4YzhkM2UwZCJ9"
-            target="_blank" class="">
-            <i class="fa-solid fa-eye"></i>Visualizar
-          </a>
+    <!-- =========================================
+         DASHBOARDS
+    ========================================== -->
+
+    <section class="empresas-container" id="experiencia">
+
+        <div class="experiencia-topicos">
+
+            <!-- CARD -->
+
+            <article class="empresa">
+
+                <div class="card-imagem">
+
+                    <img src="assets/img/img-dashboards/001-dashboard-producao/producao-ds.png"
+                        alt="Dashboard Industrial">
+
+                </div>
+
+                <div class="card-info">
+
+                    <span class="curso-tipo">
+                        PRODUÇÃO
+                    </span>
+
+                    <h3>
+                        Dashboard Industrial
+                    </h3>
+
+                    <p class="empresa-descricao">
+
+                        Monitoramento de produtividade,
+                        eficiência operacional e indicadores industriais.
+
+                    </p>
+
+                    <ul class="empresa-habilidades">
+
+                        <li>POWER BI</li>
+                        <li>DAX</li>
+                        <li>EXCEL</li>
+
+                    </ul>
+
+                    <a href="https://app.powerbi.com/view?r=eyJrIjoiYmJjN2JkMzUtYTAxNS00NDNiLWI5MzMtMTIxMzY1MGRiZTRkIiwidCI6IjQ3M2RhZThlLTg2M2MtNDE2NS1hMGE2LTk0MTA4YzhkM2UwZCJ9"
+                        target="_blank">
+
+                        <i class="fa-solid fa-eye"></i>
+
+                        Visualizar Dashboard
+
+                    </a>
+
+                </div>
+
+            </article>
+
+            <!-- CARD -->
+
+            <article class="empresa">
+
+                <div class="card-imagem">
+
+                    <img src="assets/img/img-dashboards/002-dashboard-gestao-fat/faturamento-ds.png"
+                        alt="Dashboard Financeiro">
+
+                </div>
+
+                <div class="card-info">
+
+                    <span class="curso-tipo">
+                        FINANCEIRO
+                    </span>
+
+                    <h3>
+                        Gestão Financeira
+                    </h3>
+
+                    <p class="empresa-descricao">
+
+                        Indicadores financeiros,
+                        logística e desempenho operacional.
+
+                    </p>
+
+                    <ul class="empresa-habilidades">
+
+                        <li>POWER BI</li>
+                        <li>DAX</li>
+                        <li>FIGMA</li>
+
+                    </ul>
+
+                    <a href="https://app.powerbi.com/view?r=eyJrIjoiMTE4NGZhNGEtYjA3ZS00ZTBiLTg2NzQtZWI2MWI3NDk4ZTdkIiwidCI6IjQ3M2RhZThlLTg2M2MtNDE2NS1hMGE2LTk0MTA4YzhkM2UwZCJ9"
+                        target="_blank">
+
+                        <i class="fa-solid fa-eye"></i>
+
+                        Visualizar Dashboard
+
+                    </a>
+
+                </div>
+
+            </article>
+
+            <!-- CARD -->
+
+            <article class="empresa">
+
+                <div class="card-imagem">
+
+                    <img src="assets/img/img-dashboards/004-dashboard-logistica/logistica-ds.png"
+                        alt="Dashboard Logística">
+
+                </div>
+
+                <div class="card-info">
+
+                    <span class="curso-tipo">
+                        LOGÍSTICA
+                    </span>
+
+                    <h3>
+                        Logística & Transporte
+                    </h3>
+
+                    <p class="empresa-descricao">
+
+                        Indicadores logísticos,
+                        transporte e tempo de entrega.
+
+                    </p>
+
+                    <ul class="empresa-habilidades">
+
+                        <li>POWER BI</li>
+                        <li>FIGMA</li>
+                        <li>DAX</li>
+
+                    </ul>
+
+                    <a href="https://app.powerbi.com/view?r=eyJrIjoiYmNmYmFkZDEtMjhhZC00NzhkLWEwNDgtZTJjNzZlOWQ4NDM5IiwidCI6IjQ3M2RhZThlLTg2M2MtNDE2NS1hMGE2LTk0MTA4YzhkM2UwZCJ9"
+                        target="_blank">
+
+                        <i class="fa-solid fa-eye"></i>
+
+                        Visualizar Dashboard
+
+                    </a>
+
+                </div>
+
+            </article>
+
+            <article class="empresa">
+
+                <div class="card-imagem">
+
+                    <img src="assets/img/img-dashboards/005-dashboard-fluxo/fluxo-caixa-ds.png"
+                        alt="Dashboard Logística">
+
+                </div>
+
+                <div class="card-info">
+
+                    <span class="curso-tipo">
+                        FINANCEIRO
+                    </span>
+
+                    <h3>
+                        Fluxo de Caixa
+                    </h3>
+
+                    <p class="empresa-descricao">
+
+                        Evolução de receitas e despesas mensais
+                        Classificação dos gastos por setor
+                        Indicadores de saldo e liquidez
+
+                    </p>
+
+                    <ul class="empresa-habilidades">
+
+                        <li>POWER BI</li>
+                        <li>FIGMA</li>
+                        <li>DAX</li>
+
+                    </ul>
+
+                    <a href="https://app.powerbi.com/view?r=eyJrIjoiYmNmYmFkZDEtMjhhZC00NzhkLWEwNDgtZTJjNzZlOWQ4NDM5IiwidCI6IjQ3M2RhZThlLTg2M2MtNDE2NS1hMGE2LTk0MTA4YzhkM2UwZCJ9"
+                        target="_blank">
+
+                        <i class="fa-solid fa-eye"></i>
+
+                        Visualizar Dashboard
+
+                    </a>
+
+                </div>
+
+            </article>
+
+            <article class="empresa">
+
+                <div class="card-imagem">
+
+                    <img src="assets/img/img-dashboards/004-dashboard-logistica/logistica-ds.png"
+                        alt="Dashboard Logística">
+
+                </div>
+
+                <div class="card-info">
+
+                    <span class="curso-tipo">
+                        LOGÍSTICA
+                    </span>
+
+                    <h3>
+                        Logística & Transporte
+                    </h3>
+
+                    <p class="empresa-descricao">
+
+                        Indicadores logísticos,
+                        transporte e tempo de entrega.
+
+                    </p>
+
+                    <ul class="empresa-habilidades">
+
+                        <li>POWER BI</li>
+                        <li>FIGMA</li>
+                        <li>DAX</li>
+
+                    </ul>
+
+                    <a href="https://app.powerbi.com/view?r=eyJrIjoiYmNmYmFkZDEtMjhhZC00NzhkLWEwNDgtZTJjNzZlOWQ4NDM5IiwidCI6IjQ3M2RhZThlLTg2M2MtNDE2NS1hMGE2LTk0MTA4YzhkM2UwZCJ9"
+                        target="_blank">
+
+                        <i class="fa-solid fa-eye"></i>
+
+                        Visualizar Dashboard
+
+                    </a>
+
+                </div>
+
+            </article>
+
+            <article class="empresa">
+
+                <div class="card-imagem">
+
+                    <img src="assets/img/img-dashboards/004-dashboard-logistica/logistica-ds.png"
+                        alt="Dashboard Logística">
+
+                </div>
+
+                <div class="card-info">
+
+                    <span class="curso-tipo">
+                        LOGÍSTICA
+                    </span>
+
+                    <h3>
+                        Logística & Transporte
+                    </h3>
+
+                    <p class="empresa-descricao">
+
+                        Indicadores logísticos,
+                        transporte e tempo de entrega.
+
+                    </p>
+
+                    <ul class="empresa-habilidades">
+
+                        <li>POWER BI</li>
+                        <li>FIGMA</li>
+                        <li>DAX</li>
+
+                    </ul>
+
+                    <a href="https://app.powerbi.com/view?r=eyJrIjoiYmNmYmFkZDEtMjhhZC00NzhkLWEwNDgtZTJjNzZlOWQ4NDM5IiwidCI6IjQ3M2RhZThlLTg2M2MtNDE2NS1hMGE2LTk0MTA4YzhkM2UwZCJ9"
+                        target="_blank">
+
+                        <i class="fa-solid fa-eye"></i>
+
+                        Visualizar Dashboard
+
+                    </a>
+
+                </div>
+
+            </article>
+
+            <article class="empresa">
+
+                <div class="card-imagem">
+
+                    <img src="assets/img/img-dashboards/004-dashboard-logistica/logistica-ds.png"
+                        alt="Dashboard Logística">
+
+                </div>
+
+                <div class="card-info">
+
+                    <span class="curso-tipo">
+                        LOGÍSTICA
+                    </span>
+
+                    <h3>
+                        Logística & Transporte
+                    </h3>
+
+                    <p class="empresa-descricao">
+
+                        Indicadores logísticos,
+                        transporte e tempo de entrega.
+
+                    </p>
+
+                    <ul class="empresa-habilidades">
+
+                        <li>POWER BI</li>
+                        <li>FIGMA</li>
+                        <li>DAX</li>
+
+                    </ul>
+
+                    <a href="https://app.powerbi.com/view?r=eyJrIjoiYmNmYmFkZDEtMjhhZC00NzhkLWEwNDgtZTJjNzZlOWQ4NDM5IiwidCI6IjQ3M2RhZThlLTg2M2MtNDE2NS1hMGE2LTk0MTA4YzhkM2UwZCJ9"
+                        target="_blank">
+
+                        <i class="fa-solid fa-eye"></i>
+
+                        Visualizar Dashboard
+
+                    </a>
+
+                </div>
+
+            </article>
+
+            <article class="empresa">
+
+                <div class="card-imagem">
+
+                    <img src="assets/img/img-dashboards/004-dashboard-logistica/logistica-ds.png"
+                        alt="Dashboard Logística">
+
+                </div>
+
+                <div class="card-info">
+
+                    <span class="curso-tipo">
+                        LOGÍSTICA
+                    </span>
+
+                    <h3>
+                        Logística & Transporte
+                    </h3>
+
+                    <p class="empresa-descricao">
+
+                        Indicadores logísticos,
+                        transporte e tempo de entrega.
+
+                    </p>
+
+                    <ul class="empresa-habilidades">
+
+                        <li>POWER BI</li>
+                        <li>FIGMA</li>
+                        <li>DAX</li>
+
+                    </ul>
+
+                    <a href="https://app.powerbi.com/view?r=eyJrIjoiYmNmYmFkZDEtMjhhZC00NzhkLWEwNDgtZTJjNzZlOWQ4NDM5IiwidCI6IjQ3M2RhZThlLTg2M2MtNDE2NS1hMGE2LTk0MTA4YzhkM2UwZCJ9"
+                        target="_blank">
+
+                        <i class="fa-solid fa-eye"></i>
+
+                        Visualizar Dashboard
+
+                    </a>
+
+                </div>
+
+            </article>
+
+            <article class="empresa">
+
+                <div class="card-imagem">
+
+                    <img src="assets/img/img-dashboards/004-dashboard-logistica/logistica-ds.png"
+                        alt="Dashboard Logística">
+
+                </div>
+
+                <div class="card-info">
+
+                    <span class="curso-tipo">
+                        LOGÍSTICA
+                    </span>
+
+                    <h3>
+                        Logística & Transporte
+                    </h3>
+
+                    <p class="empresa-descricao">
+
+                        Indicadores logísticos,
+                        transporte e tempo de entrega.
+
+                    </p>
+
+                    <ul class="empresa-habilidades">
+
+                        <li>POWER BI</li>
+                        <li>FIGMA</li>
+                        <li>DAX</li>
+
+                    </ul>
+
+                    <a href="https://app.powerbi.com/view?r=eyJrIjoiYmNmYmFkZDEtMjhhZC00NzhkLWEwNDgtZTJjNzZlOWQ4NDM5IiwidCI6IjQ3M2RhZThlLTg2M2MtNDE2NS1hMGE2LTk0MTA4YzhkM2UwZCJ9"
+                        target="_blank">
+
+                        <i class="fa-solid fa-eye"></i>
+
+                        Visualizar Dashboard
+
+                    </a>
+
+                </div>
+
+            </article>
+
+            <article class="empresa">
+
+                <div class="card-imagem">
+
+                    <img src="assets/img/img-dashboards/004-dashboard-logistica/logistica-ds.png"
+                        alt="Dashboard Logística">
+
+                </div>
+
+                <div class="card-info">
+
+                    <span class="curso-tipo">
+                        LOGÍSTICA
+                    </span>
+
+                    <h3>
+                        Logística & Transporte
+                    </h3>
+
+                    <p class="empresa-descricao">
+
+                        Indicadores logísticos,
+                        transporte e tempo de entrega.
+
+                    </p>
+
+                    <ul class="empresa-habilidades">
+
+                        <li>POWER BI</li>
+                        <li>FIGMA</li>
+                        <li>DAX</li>
+
+                    </ul>
+
+                    <a href="https://app.powerbi.com/view?r=eyJrIjoiYmNmYmFkZDEtMjhhZC00NzhkLWEwNDgtZTJjNzZlOWQ4NDM5IiwidCI6IjQ3M2RhZThlLTg2M2MtNDE2NS1hMGE2LTk0MTA4YzhkM2UwZCJ9"
+                        target="_blank">
+
+                        <i class="fa-solid fa-eye"></i>
+
+                        Visualizar Dashboard
+
+                    </a>
+
+                </div>
+
+            </article>
+
         </div>
-      </div>
 
-      <div class="empresa">
-        <div class="card-imagem">
-          <div class="iframe-container">
-            <img src="assets/img/img-dashboards/002-dashboard-gestao-fat/faturamento-ds.png" frameborder="0"
-              allowFullScreen="true"></img>
-          </div>
+    </section>
+
+    <!-- =========================================
+         CONTATO
+    ========================================== -->
+
+    <section id="contato" class="contact-section">
+
+    <div class="contact-container">
+
+        <!-- LEFT -->
+
+        <div class="contact-left">
+
+            <span class="contact-badge">
+                DISPONÍVEL PARA PROJETOS
+            </span>
+
+            <h2>
+                Vamos conversar?
+            </h2>
+
+            <p>
+                Entre em contato comigo através das plataformas abaixo.
+                Estou disponível para projetos de dashboards, análise de dados,
+                automações e Business Intelligence.
+            </p>
+
+            <div class="contact-grid">
+
+                <!-- WhatsApp -->
+
+                <a href="https://api.whatsapp.com/send?phone=5561985612400"
+                    target="_blank"
+                    class="contact-card">
+
+                    <div class="contact-icon">
+
+                        <i class="fa-brands fa-whatsapp"></i>
+
+                    </div>
+
+                    <div>
+
+                        <h4>
+                            WhatsApp
+                        </h4>
+
+                        <span>
+                            Contato rápido
+                        </span>
+
+                    </div>
+
+                </a>
+
+                <!-- EMAIL -->
+
+                <a href="mailto:fellipe.scontato@gmail.com"
+                    class="contact-card">
+
+                    <div class="contact-icon">
+
+                        <i class="fa-solid fa-envelope"></i>
+
+                    </div>
+
+                    <div>
+
+                        <h4>
+                            E-mail
+                        </h4>
+
+                        <span>
+                            fellipe.scontato@gmail.com
+                        </span>
+
+                    </div>
+
+                </a>
+
+                <!-- LINKEDIN -->
+
+                <a href="https://www.linkedin.com/in/fellipesmelo"
+                    target="_blank"
+                    class="contact-card">
+
+                    <div class="contact-icon">
+
+                        <i class="fa-brands fa-linkedin"></i>
+
+                    </div>
+
+                    <div>
+
+                        <h4>
+                            LinkedIn
+                        </h4>
+
+                        <span>
+                            Networking profissional
+                        </span>
+
+                    </div>
+
+                </a>
+
+                <!-- GITHUB -->
+
+                <a href="https://github.com/Fellipe-dotmelo"
+                    target="_blank"
+                    class="contact-card">
+
+                    <div class="contact-icon">
+
+                        <i class="fa-brands fa-github"></i>
+
+                    </div>
+
+                    <div>
+
+                        <h4>
+                            GitHub
+                        </h4>
+
+                        <span>
+                            Projetos e códigos
+                        </span>
+
+                    </div>
+
+                </a>
+
+            </div>
+
         </div>
-        <div class="card-info">
-          <h5 class="curso-tipo">Dashboard | Gestão de Faturamento e Logística</h5>
-          <p class="empresa-descricao">Este painel analisa o faturamento e a logística de entregas, permitindo visualizar o fluxo de pedidos, devoluções e desempenho das distribuições.
-          </p>
 
-          <h5 class="curso-tipo">Insights Extraídos</h5>
-          <ul class="insights-lista">
-            <li><i class="fa fa-check" aria-hidden="true"></i>Total de entregas e pedidos processados</li>
-            <li><i class="fa fa-check" aria-hidden="true"></i>Análise de devoluções por motivo</li>
-            <li><i class="fa fa-check" aria-hidden="true"></i>Distribuição de entregas ao longo do tempo</li>
-        </ul>
+        <!-- MAP -->
 
-          <ul class="empresa-habilidades">
-            <li>EXCEL</li>
-            <li>POWER BI</li>
-            <li>DAX</li>
-          </ul>
-          <a href="https://app.powerbi.com/view?r=eyJrIjoiMTE4NGZhNGEtYjA3ZS00ZTBiLTg2NzQtZWI2MWI3NDk4ZTdkIiwidCI6IjQ3M2RhZThlLTg2M2MtNDE2NS1hMGE2LTk0MTA4YzhkM2UwZCJ9"
-            target="_blank" class="">
-            <i class="fa-solid fa-eye"></i>Visualizar
-          </a>
+        <div class="contact-map">
+
+            <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d169254.55532343482!2d-47.924970875738005!3d-15.715218602297746!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x935a3d18df9ae275%3A0x738470e469754a24!2zQnJhc8OtbGlhLCBERg!5e0!3m2!1spt-BR!2sbr!4v1713541885597!5m2!1spt-BR!2sbr"
+                allowfullscreen=""
+                loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade">
+
+            </iframe>
+
         </div>
-      </div>
-
-      <!--
-      <div class="empresa">
-        <div class="card-imagem">
-          <div class="iframe-container">
-            <img title="base_axon" src="assets/img/img-dashboards/003-dashboard-faturamento/faturamento-axon-ds.png"
-              frameborder="0" allowFullScreen="true"></img>
-          </div>
-        </div>
-        <div class="card-info">
-          <h5 class="curso-tipo">Dashboard | Faturamento Axon Health Care</h5>
-          <p class="empresa-descricao">Dashboard desenvolvido no Power BI para o processo seletivo da
-            empresa de produtos hospitalares Axon Health Care, com uso de filtros, funções DAX e Figma
-            para monstagem do layout.
-          </p>
-          <ul class="empresa-habilidades">
-            <li>EXCEL</li>
-            <li>POWER BI</li>
-            <li>FIGMA</li>
-            <li>DAX</li>
-          </ul>
-          <a href="https://app.powerbi.com/view?r=eyJrIjoiMWZkN2UxYzEtZmU4ZS00ODk1LTgxZmEtYWI5ZjVhNDk1OTk3IiwidCI6IjQ3M2RhZThlLTg2M2MtNDE2NS1hMGE2LTk0MTA4YzhkM2UwZCJ9"
-            target="_blank" class="">
-            <i class="fa-solid fa-eye"></i>Visualizar
-          </a>
-        </div>
-      </div>
-      -->
-      
-
-      <div class="empresa">
-        <div class="card-imagem">
-          <div class="iframe-container">
-            <img src="assets/img/img-dashboards/004-dashboard-logistica/logistica-ds.png" frameborder="0"
-              allowFullScreen="true"></img>
-          </div>
-        </div>
-        <div class="card-info">
-          <h5 class="curso-tipo">Dashboard | Logística e Transporte</h5>
-          <p class="empresa-descricao">Painel focado na análise da eficiência logística, apresentando informações sobre viagens, tempo de transporte e taxas de entregas pontuais.
-          </p>
-          
-          <h5 class="curso-tipo">Insights Extraídos</h5>
-          <ul class="insights-lista">
-            <li><i class="fa fa-check" aria-hidden="true"></i>Volume de viagens e rotas utilizadas</li>
-            <li><i class="fa fa-check" aria-hidden="true"></i>Tempo médio de entrega por região</li>
-            <li><i class="fa fa-check" aria-hidden="true"></i>Indicador de On Time Delivery (OTD)</li>
-        </ul>
-
-          <ul class="empresa-habilidades">
-            <li>EXCEL</li>
-            <li>POWER BI</li>
-            <li>FIGMA</li>
-            <li>DAX</li>
-          </ul>
-          <a href="https://app.powerbi.com/view?r=eyJrIjoiYmNmYmFkZDEtMjhhZC00NzhkLWEwNDgtZTJjNzZlOWQ4NDM5IiwidCI6IjQ3M2RhZThlLTg2M2MtNDE2NS1hMGE2LTk0MTA4YzhkM2UwZCJ9"
-            target="_blank" class="">
-            <i class="fa-solid fa-eye"></i>Visualizar
-          </a>
-        </div>
-      </div>
-
-      <div class="empresa">
-        <div class="card-imagem">
-          <div class="iframe-container">
-            <img src="assets/img/img-dashboards/005-dashboard-fluxo/fluxo-caixa-ds.png" frameborder="0"
-              allowFullScreen="true"></img>
-          </div>
-        </div>
-        <div class="card-info">
-          <h5 class="curso-tipo">Dashboard | Fluxo de Caixa</h5>
-          <p class="empresa-descricao">Dashboard financeiro que permite registrar receitas, despesas e saldo ao longo do tempo, oferecendo uma visão estratégica da saúde financeira da empresa.
-          </p>
-
-          <h5 class="curso-tipo">Insights Extraídos</h5>
-          <ul class="insights-lista">
-            <li><i class="fa fa-check" aria-hidden="true"></i>Evolução de receitas e despesas mensais</li>
-            <li><i class="fa fa-check" aria-hidden="true"></i>Classificação dos gastos por setor</li>
-            <li><i class="fa fa-check" aria-hidden="true"></i>Indicadores de saldo e liquidez</li>
-        </ul>
-
-          <ul class="empresa-habilidades">
-            <li>EXCEL</li>
-            <li>POWER BI</li>
-            <li>FIGMA</li>
-            <li>DAX</li>
-          </ul>
-          <a href="https://app.powerbi.com/view?r=eyJrIjoiNjA2NDhlYTUtNTg1My00NTc4LWI0MmYtMGY2MjUzZjM5YmQ3IiwidCI6IjQ3M2RhZThlLTg2M2MtNDE2NS1hMGE2LTk0MTA4YzhkM2UwZCJ9"
-            target="_blank" class="">
-            <i class="fa-solid fa-eye"></i>Visualizar
-          </a>
-        </div>
-      </div>
-
-
-
-      <div class="empresa">
-        <div class="card-imagem">
-          <div class="iframe-container">
-            <img src="assets/img/img-dashboards/006-acompanhando-vendas/vendas-acompanhando-ds.png" frameborder="0"
-              allowFullScreen="true"></img>
-          </div>
-        </div>
-        <div class="card-info">
-          <h5 class="curso-tipo">Dashboard | Acompanhamento de Vendas</h5>
-          <p class="empresa-descricao">Dashboard desenvolvido no Power BI para acompanhamento de vendas,
-            com uso de filtros, funções DAX e Figma para monstagem do layout.
-          </p>
-
-          <h5 class="curso-tipo">Insights Extraídos</h5>
-          <ul class="insights-lista">
-            <li><i class="fa fa-check" aria-hidden="true"></i>Faturamento total e ticket médio</li>
-            <li><i class="fa fa-check" aria-hidden="true"></i>Volume de vendas por estado e cidade</li>
-            <li><i class="fa fa-check" aria-hidden="true"></i>Perfis de clientes e análise de mercado</li>
-        </ul>
-
-          <ul class="empresa-habilidades">
-            <li>EXCEL</li>
-            <li>POWER BI</li>
-            <li>FIGMA</li>
-            <li>DAX</li>
-          </ul>
-          <a href="https://app.powerbi.com/view?r=eyJrIjoiM2Y5MzkyMzYtZTk2OS00MjRlLTlmY2QtNDk5ZjUyODFlZGEwIiwidCI6IjQ3M2RhZThlLTg2M2MtNDE2NS1hMGE2LTk0MTA4YzhkM2UwZCJ9"
-            target="_blank" class="">
-            <i class="fa-solid fa-eye"></i>Visualizar
-          </a>
-        </div>
-      </div>
-
-      <div class="empresa">
-        <div class="card-imagem">
-          <div class="iframe-container">
-            <img src="assets/img/img-dashboards/007-dashboard-ub/ub-ds.png" frameborder="0"
-              allowFullScreen="true"></img>
-          </div>
-        </div>
-        <div class="card-info">
-          <h5 class="curso-tipo">Dashboard | Filiados União Brasil</h5>
-          <p class="empresa-descricao">Painel desenvolvido para a gestão de membros do partido União Brasil, permitindo visualizar a distribuição de afiliados por estado e carga.
-          </p>
-  
-          <h5 class="curso-tipo">Insights Extraídos</h5>
-          <ul class="insights-lista">
-            <li><i class="fa fa-check" aria-hidden="true"></i>Afiliados por unidade federativa</li>
-            <li><i class="fa fa-check" aria-hidden="true"></i>Cargas ocupadas e situação dos membros</li>
-            <li><i class="fa fa-check" aria-hidden="true"></i>Distribuição geográfica dos membros</li>
-        </ul>
-
-          <ul class="empresa-habilidades">
-            <li>EXCEL</li>
-            <li>POWER BI</li>
-            <li>FIGMA</li>
-            <li>DAX</li>
-          </ul>
-          <a href="https://app.powerbi.com/view?r=eyJrIjoiNTNkODZjMDgtMjkwOC00YjgyLThmMGEtY2ZkN2YyNWEyMTBhIiwidCI6IjQ3M2RhZThlLTg2M2MtNDE2NS1hMGE2LTk0MTA4YzhkM2UwZCJ9"
-            target="_blank" class="">
-            <i class="fa-solid fa-eye"></i>Visualizar
-          </a>
-        </div>
-      </div>
-
-      <div class="empresa">
-        <div class="card-imagem">
-          <div class="iframe-container">
-            <img src="assets/img/img-dashboards/008-dashboard-vendas-eletronicos/dash-vendas-eletronicos.png"
-              frameborder="0" allowFullScreen="true"></img>
-            </abbr>
-          </div>
-        </div>
-        <div class="card-info">
-          <h5 class="curso-tipo">Dashboard | Vendas de Eletrônicos</h5>
-          <p class="empresa-descricao">Este painel permite acompanhar em detalhes o desempenho das vendas de produtos eletrônicos, analisando faturamento, ticket médio e categorias de produtos.
-          </p>
-
-          <h5 class="curso-tipo">Insights Extraídos</h5>
-          <ul class="insights-lista">
-            <li><i class="fa fa-check" aria-hidden="true"></i>Faturamento e ticket médio por período</li>
-            <li><i class="fa fa-check" aria-hidden="true"></i>Análise por categoria de produto</li>
-            <li><i class="fa fa-check" aria-hidden="true"></i>Sazonalidade e tendências de mercado</li>
-        </ul>
-
-          <ul class="empresa-habilidades">
-            <li>EXCEL</li>
-            <li>POWER BI</li>
-            <li>FIGMA</li>
-            <li>TOOLTIP</li>
-          </ul>
-          <a href="https://app.powerbi.com/view?r=eyJrIjoiYjFlMGUxYmUtODQ1ZS00MzkxLTk2NTAtYmM1MTZhMThiNjYzIiwidCI6IjQ3M2RhZThlLTg2M2MtNDE2NS1hMGE2LTk0MTA4YzhkM2UwZCJ9"
-            target="_blank" class="">
-            <i class="fa-solid fa-eye"></i>Visualizar
-          </a>
-        </div>
-      </div>
-
-      <div class="empresa">
-        <div class="card-imagem">
-          <div class="iframe-container">
-            <img src="assets/img/img-dashboards/009-dashboard-universidade/dash-universidade-alunospng.png"
-              frameborder="0" allowFullScreen="true"></img>
-          </div>
-        </div>
-        <div class="card-info">
-          <h5 class="curso-tipo">Dashboard | Universidade</h5>
-          <p class="empresa-descricao">Este painel acompanha indicadores acadêmicos, financeiros e operacionais de um campus universitário, permitindo a análise de inadimplência, matrículas e distribuição de alunos por curso e turno. Ele fornece insights sobre a gestão financeira e acadêmica, auxilia</p>
-
-          <h5 class="curso-tipo">Insights Extraídos</h5>
-          <ul class="insights-lista">
-            <li><i class="fa fa-check" aria-hidden="true"></i>Nível de inadimplência por curso</li>
-            <li><i class="fa fa-check" aria-hidden="true"></i>Total de matrículas por campus</li>
-            <li><i class="fa fa-check" aria-hidden="true"></i>Taxa de evasão por idade e curso</li>
-        </ul>
-
-          <ul class="empresa-habilidades">
-            <li>EXCEL</li>
-            <li>POWER BI</li>
-            <li>SQL SERVER</li>
-          </ul>
-          <a href="https://app.powerbi.com/view?r=eyJrIjoiZTY1NGYwNGEtOTNmOS00MWExLWFiZmYtNzJiNjViNDlhOTEwIiwidCI6IjQ3M2RhZThlLTg2M2MtNDE2NS1hMGE2LTk0MTA4YzhkM2UwZCJ9"
-            target="_blank" class="">
-            <i class="fa-solid fa-eye"></i>Visualizar
-          </a>
-        </div>
-      </div>
-
-      <div class="empresa">
-        <div class="card-imagem">
-          <div class="iframe-container">
-            <img src="assets/img/img-dashboards/012-vendas-sazonalidade/receita-sazonal-ds.png" frameborder="0"
-              allowFullScreen="true"></img>
-          </div>
-        </div>
-        <div class="card-info">
-          <h5 class="curso-tipo">Dashboard | Receita e Sazonalidade</h5>
-          <p class="empresa-descricao">Dashboard desenvolvido no Power BI para acompanhamento da venda de
-            frutas por ano, receita por fazenda, por qual meio de transporte é entregue, países que mais
-            consomem, entre outras coisas. Com uso de filtros, funções DAX e Figma para monstagem do
-            layout.
-          </p>
-
-          <h5 class="curso-tipo">Insights Extraídos</h5>
-          <ul class="insights-lista">
-            <li><i class="fa fa-check" aria-hidden="true"></i>Receita e volume ao longo do tempo</li>
-            <li><i class="fa fa-check" aria-hidden="true"></i>Distribuição da receita por fazenda</li>
-            <li><i class="fa fa-check" aria-hidden="true"></i>Sazonalidade dos cultivos</li>
-          </ul>
-
-          <ul class="empresa-habilidades">
-            <li>EXCEL</li>
-            <li>POWER BI</li>
-            <li>FIGMA</li>
-            <li>DAX</li>
-          </ul>
-          <a href="https://app.powerbi.com/view?r=eyJrIjoiMjQ3NGIxYmQtYmI3OC00ZGQyLTkwYTEtNjg2OGJhMGNiOGJkIiwidCI6IjQ3M2RhZThlLTg2M2MtNDE2NS1hMGE2LTk0MTA4YzhkM2UwZCJ9"
-            target="_blank" class="">
-            <i class="fa-solid fa-eye"></i>Visualizar
-          </a>
-        </div>
-      </div>
-
-      <div class="empresa">
-        <div class="card-imagem">
-          <div class="iframe-container">
-            <img src="assets/img/img-dashboards/bg-rh-yto-nihon.png" frameborder="0"
-              allowFullScreen="true"></img>
-          </div>
-        </div>
-        <div class="card-info">
-          <h5 class="curso-tipo">Dashboard | RH</h5>
-          <p class="empresa-descricao">Este dashboard de Recursos Humanos | Visão Geral apresenta uma análise consolidada dos principais indicadores de RH da empresa para o ano de 2017. Abaixo está um resumo das informações e insights relevantes.
-          </p>
-
-          <h5 class="curso-tipo">Insights Extraídos</h5>
-          <ul class="insights-lista">
-            <li><i class="fa fa-check" aria-hidden="true"></i>Turnover</li>
-            <li><i class="fa fa-check" aria-hidden="true"></i>Média de Avaliação	</li>
-            <li><i class="fa fa-check" aria-hidden="true"></i>Distribuição por Gênero</li>
-          </ul>
-
-          <ul class="empresa-habilidades">
-            <li>EXCEL</li>
-            <li>POWER BI</li>
-            <li>FIGMA</li>
-            <li>DAX</li>
-          </ul>
-          <a href="https://app.powerbi.com/view?r=eyJrIjoiZDcxNTlkYTgtNGVkNS00MWRiLThhYTktMzNjMTJmN2QzZjk0IiwidCI6IjQ3M2RhZThlLTg2M2MtNDE2NS1hMGE2LTk0MTA4YzhkM2UwZCJ9"
-            target="_blank" class="">
-            <i class="fa-solid fa-eye"></i>Visualizar
-          </a>
-        </div>
-      </div>
 
     </div>
-    
 
+</section>
 
-  </section>
+    <!-- =========================================
+         FOOTER
+    ========================================== -->
 
-  <section id="contato" class="position-relative section">
-    <div class="container text-center">
-      <div class="contact text-left">
-        <div class="form">
-          <h6 class="section-title mb-3" style="color: #FFF;">Insira seu contato</h6>
-          <form action="https://formspree.io/f/xvoewdod" method="POST">
-            <div class="form-group">
-              <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
-                placeholder="Insira seu e-mail" required>
-            </div>
-            <div class="form-group">
-              <textarea name="contact-message" id="" cols="30" rows="5" class="form-control"
-                placeholder="Insira uma mensagem"></textarea>
-            </div>
-            <button type="submit" class="btn btn-primary btn-block rounded w-lg">ENVIAR</button>
-          </form>
-        </div>
-        <div class="contact-infos">
-          <div class="item">
-            <i class="ti-mobile"></i>
-            <div>
-              <h5 class="curso-tipo">WhatsApp</h5>
-              <a href="https://api.whatsapp.com/send?phone=5561985612400" class="social-item">Contato</a>
-            </div>
-          </div>
-          <div class="item">
-            <i class="ti-email"></i>
-            <div class="mb-0">
-              <h5 class="curso-tipo">E-mail</h5>
-              <p>fellipe.scontato@gmail.com</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    </div>
-    <div id="map">
-      <iframe
-        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d169254.55532343482!2d-47.924970875738005!3d-15.715218602297746!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x935a3d18df9ae275%3A0x738470e469754a24!2zQnJhc8OtbGlhLCBERg!5e0!3m2!1spt-BR!2sbr!4v1713541885597!5m2!1spt-BR!2sbr"
-        width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
-        referrerpolicy="no-referrer-when-downgrade"></iframe>
-    </div>
-  </section>
-
-  <section>
     <footer class="page-footer">
-      <div class="container">
-        <div class="row align-items-center">
-          <p>Esta página está em constante atualização. Alguns direitos são reservados - Fellipe Melo
-            <script>
-              document.write(new Date().getFullYear())
-            </script> &copy; </p>
-          <div id="cookie-banner"
-            style="position: fixed; bottom: 0; background: #333; color: #fff; padding: 10px; width: 100%; display: none;">
-            <p>Este site usa cookies para melhorar a experiência. <a href="/privacy-policy">Saiba
-                mais</a>. <button id="accept-cookies">Aceitar</button></p>
-          </div>
 
-          <script>
-            document.getElementById('accept-cookies').addEventListener('click', function () {
-              document.getElementById('cookie-banner').style.display = 'none';
-              document.cookie = "cookieConsent=true; SameSite=Lax";
-            });
+        <p>
+            © 2026 • Fellipe Melo • Data Analytics & Business Intelligence
+        </p>
 
-            if (document.cookie.indexOf('cookieConsent=true') === -1) {
-              document.getElementById('cookie-banner').style.display = 'block';
-            }
-          </script>
-        </div>
-      </div>
     </footer>
-  </section>
+
+    <!-- =========================================
+         MENU MOBILE
+    ========================================== -->
+
+    <script>
+
+        const toggle = document.getElementById('menuToggle');
+        const nav = document.getElementById('navMenu');
+
+        toggle.addEventListener('click', () => {
+            nav.classList.toggle('show');
+        });
+
+        window.addEventListener('scroll', () => {
+
+            const navbar = document.querySelector('.custom-navbar');
+
+            navbar.classList.toggle(
+                'scrolled',
+                window.scrollY > 20
+            );
+
+        });
+
+    </script>
+
 </body>
 
 </html>
+```
