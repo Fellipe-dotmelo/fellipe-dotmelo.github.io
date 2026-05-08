@@ -111,6 +111,16 @@
   margin-bottom: 22px;
 }
 
+.sobre-content h4{
+  color: #fff;
+
+  font-size: 28px;
+
+  font-weight: 700;
+
+  margin-bottom: 16px;
+}
+
 /* stacks */
 
 .sobre-stacks {
@@ -122,6 +132,7 @@
 
   margin-top: 40px;
 }
+
 
 .sobre-stacks span {
   background:

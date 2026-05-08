@@ -58,10 +58,7 @@
 
 .formacao-grid {
   display: grid;
-
-  grid-template-columns:
-    repeat(auto-fit, minmax(260px, 1fr));
-
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
   gap: 18px;
 }
 
@@ -128,7 +125,7 @@
 /* text */
 
 .formacao-card p {
-  color: rgba(255,255,255,.58);
+  color: #dcd6d6e8;
 
   font-size: 14px;
 

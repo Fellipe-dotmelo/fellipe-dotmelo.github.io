@@ -199,7 +199,7 @@
 
 /* title */
 
-.habilidade-card h3 {
+.habilidade-card h4 {
   color: #fff;
 
   font-size: 28px;
@@ -294,7 +294,7 @@
     padding: 22px;
   }
 
-  .habilidade-card h3 {
+  .habilidade-card h4 {
     font-size: 24px;
   }
 

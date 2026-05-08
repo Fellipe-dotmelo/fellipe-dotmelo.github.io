@@ -1121,6 +1121,13 @@ header .container {
   position: relative;
 }
 
+.formacao-content h4 {
+  color: var(--cor-fundo);
+  font-size: 1.25rem;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+}
+
 /* Estilo padrão para o item de curso */
 .curso {
   position: relative;
