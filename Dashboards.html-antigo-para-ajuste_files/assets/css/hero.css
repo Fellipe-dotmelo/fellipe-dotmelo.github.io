@@ -1,0 +1,370 @@
+/* =========================================
+   HERO
+========================================= */
+
+.hero-section {
+  background: #ececec;
+
+  min-height: 100vh;
+
+  display: flex;
+  align-items: center;
+
+  position: relative;
+
+  overflow: hidden;
+
+  padding: 120px 0 80px;
+}
+
+/* container */
+
+.hero-container {
+  width: min(1380px, 92vw);
+
+  margin: 0 auto;
+
+  display: grid;
+
+  grid-template-columns: 1fr 560px;
+
+  gap: 90px;
+
+  align-items: center;
+}
+
+/* =========================================
+   CONTENT
+========================================= */
+
+.hero-content {
+  max-width: 760px;
+}
+
+/* badge */
+
+.hero-badge {
+  display: inline-flex;
+
+  align-items: center;
+
+  background:
+    rgba(255,122,87,.10);
+
+  border:
+    1px solid rgba(255,122,87,.18);
+
+  color: #ff7a57;
+
+  padding: 10px 16px;
+
+  border-radius: 999px;
+
+  font-size: 12px;
+
+  font-weight: 700;
+
+  letter-spacing: .5px;
+
+  margin-bottom: 26px;
+}
+
+/* title */
+
+.hero-content h1 {
+  font-size: clamp(54px, 7vw, 92px);
+
+  line-height: .95;
+
+  font-weight: 800;
+
+  color: #2f343d;
+
+  margin-bottom: 28px;
+}
+
+/* text */
+
+.hero-content p {
+  font-size: 20px;
+
+  line-height: 1.8;
+
+  color: rgba(47,52,61,.75);
+
+  max-width: 620px;
+
+  margin-bottom: 36px;
+}
+
+/* =========================================
+   STACKS
+========================================= */
+
+.hero-stacks {
+  display: flex;
+
+  flex-wrap: wrap;
+
+  gap: 12px;
+
+  margin-bottom: 42px;
+}
+
+.hero-stacks span {
+  background: #fff;
+
+  border:
+    1px solid rgba(0,0,0,.06);
+
+  padding: 10px 16px;
+
+  border-radius: 999px;
+
+  font-size: 12px;
+
+  font-weight: 700;
+
+  color: #2f343d;
+
+  transition:
+    transform .25s ease,
+    border-color .25s ease;
+}
+
+.hero-stacks span:hover {
+  transform: translateY(-2px);
+
+  border-color:
+    rgba(255,122,87,.28);
+}
+
+/* =========================================
+   BUTTONS
+========================================= */
+
+.hero-buttons {
+  display: flex;
+
+  flex-wrap: wrap;
+
+  gap: 16px;
+
+  margin-bottom: 38px;
+}
+
+.hero-btn {
+  display: inline-flex;
+
+  align-items: center;
+
+  gap: 10px;
+
+  padding: 16px 24px;
+
+  border-radius: 14px;
+
+  text-decoration: none;
+
+  font-weight: 700;
+
+  transition:
+    transform .25s ease,
+    box-shadow .25s ease,
+    background .25s ease;
+}
+
+.hero-btn:hover {
+  transform: translateY(-3px);
+}
+
+/* primary */
+
+.hero-btn.primary {
+  background: #ff7a57;
+
+  color: #fff;
+
+  box-shadow:
+    0 14px 30px rgba(255,122,87,.22);
+}
+
+/* secondary */
+
+.hero-btn.secondary {
+  background: #fff;
+
+  color: #2f343d;
+
+  border:
+    1px solid rgba(0,0,0,.06);
+}
+
+/* =========================================
+   SOCIAL
+========================================= */
+
+.hero-social {
+  display: flex;
+
+  gap: 16px;
+}
+
+.hero-social a {
+  width: 56px;
+  height: 56px;
+
+  border-radius: 50%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background: #fff;
+
+  color: #ff7a57;
+
+  font-size: 18px;
+
+  text-decoration: none;
+
+  border:
+    1px solid rgba(0,0,0,.06);
+
+  transition:
+    transform .25s ease,
+    border-color .25s ease;
+}
+
+.hero-social a:hover {
+  transform: translateY(-3px);
+
+  border-color:
+    rgba(255,122,87,.28);
+}
+
+/* =========================================
+   IMAGE
+========================================= */
+
+.hero-image {
+  position: relative;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* glow aumentado */
+
+.hero-image-glow {
+  position: absolute;
+
+  width: 540px;
+  height: 540px;
+
+  border-radius: 50%;
+
+  background:
+    radial-gradient(
+      circle,
+      rgba(255,122,87,.20),
+      transparent 70%
+    );
+
+  filter: blur(28px);
+}
+
+/* imagem +25% */
+
+.hero-image img {
+  position: relative;
+
+  width: 100%;
+
+  max-width: 530px;
+
+  aspect-ratio: 1 / 1;
+
+  object-fit: cover;
+
+  border-radius: 50%;
+
+  border:
+    10px solid rgba(47,52,61,.16);
+
+  box-shadow:
+    0 28px 70px rgba(0,0,0,.18);
+}
+
+/* =========================================
+   RESPONSIVO
+========================================= */
+
+@media (max-width: 992px) {
+
+  .hero-section {
+    padding: 140px 0 90px;
+  }
+
+  .hero-container {
+    grid-template-columns: 1fr;
+
+    gap: 60px;
+
+    text-align: center;
+  }
+
+  .hero-content {
+    max-width: 100%;
+  }
+
+  .hero-stacks,
+  .hero-buttons,
+  .hero-social {
+    justify-content: center;
+  }
+
+  .hero-image {
+    order: -1;
+  }
+
+  .hero-image img {
+    max-width: 360px;
+  }
+
+  .hero-image-glow {
+    width: 420px;
+    height: 420px;
+  }
+}
+
+@media (max-width: 768px) {
+
+  .hero-content h1 {
+    font-size: 52px;
+  }
+
+  .hero-content p {
+    font-size: 17px;
+  }
+
+  .hero-btn {
+    width: 100%;
+
+    justify-content: center;
+  }
+
+  .hero-buttons {
+    flex-direction: column;
+  }
+
+  .hero-image img {
+    max-width: 270px;
+  }
+
+  .hero-image-glow {
+    width: 300px;
+    height: 300px;
+  }
+}

@@ -123,11 +123,11 @@ body{
    TITLE
 ========================================= */
 
-.card-info h3{
+.card-info h4{
     color:#fff;
 
-    font-size:34px;
-    font-weight:800;
+    font-size:28px;
+    font-weight:600;
 
     margin-bottom:18px;
 }
